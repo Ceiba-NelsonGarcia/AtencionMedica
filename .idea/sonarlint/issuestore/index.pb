@@ -29,8 +29,6 @@ jjava-arquitectura-hexagonal/microservicio/dominio/src/test/java/com/ceiba/usuar
 {java-arquitectura-hexagonal/microservicio/dominio/src/test/java/com/ceiba/usuario/servicio/ServicioEliminarUsuarioTest.java,7\0\707a54d084ca442c9b177eeb0b4beac20717b3c0
 ­
 }java-arquitectura-hexagonal/microservicio/dominio/src/test/java/com/ceiba/usuario/servicio/ServicioActualizarUsuarioTest.java,b\f\bf90b7b59414a520dd7b28f5ed437ae055c65210
-‚
-Rjava-arquitectura-hexagonal/microservicio/src/main/java/com/ceiba/Application.java,6\d\6dc92ec4852c9fea83ef5d783c73fa6eb6f88f02
 º
 ‰java-arquitectura-hexagonal/microservicio/infraestructura/src/test/java/com/ceiba/usuario/controlador/ConsultaControladorUsuarioTest.java,d\f\dfb75b79ef8a8463c6dbf5b98948db4c44a9cc13
 ¨

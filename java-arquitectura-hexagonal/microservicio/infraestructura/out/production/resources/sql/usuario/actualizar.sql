@@ -1,0 +1,1 @@
+update usuario set nombre_usuario = :nombreUsuario where id_usuario = :idUsuario

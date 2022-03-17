@@ -1,0 +1,1 @@
+insert into doctor (nombre_doctor,id_tarifa,id_horario) values (:nombreDoctor,:idTarifa,:idHorario)
