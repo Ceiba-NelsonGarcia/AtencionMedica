@@ -1,0 +1,152 @@
+CAMBIOS
+
+Secuencia de creación
+
+Dominio
+    entidad
+    
+
+1. Nuevos scrpts en base de datos
+
+Cambio: Se actualizó el archivo para agregar los scripts de creación de tablas y de inserción de registros
+Clase:  V1.0__schema.sql
+Capa:   microservicio\src\main\resources
+Ubica:  D:\Proyectos\Java\AtencionMedica\java-arquitectura-hexagonal\microservicio\src\main\resources\db\migration\DDL\V1.0__schema.sql
+
+2. Se elimina el atributo fechaCreación y se actualizan id, nombre de la clase usuario.
+
+DOMINIO
+
+Cambio: En la entidad Usuario
+Clase:  Usuario.java
+Capa:   microservicio\dominio
+Ubica:  D:\Proyectos\Java\AtencionMedica\java-arquitectura-hexagonal\microservicio\dominio\src\main\java\com\ceiba\usuario\modelo\entidad\Usuario.java
+
+Cambio: El el la carpeta dto
+Clase:  DtoUsuario.java
+Capa:   microservicio\dominio
+Ubica:  D:\Proyectos\Java\AtencionMedica\java-arquitectura-hexagonal\microservicio\dominio\src\main\java\com\ceiba\usuario\modelo\dto\DtoUsuario.java
+
+Cambio: Se actauliza el getId por getIdUsuario
+Clase:  ServicioActualizarUsuario.java 
+Capa:   microservicio\dominio
+Ubica:  D:\Proyectos\Java\AtencionMedica\java-arquitectura-hexagonal\microservicio\dominio\src\main\java\com\ceiba\usuario\servicio\ServicioActualizarUsuario.java
+
+Cambio: Se actauliza el getNombre por getNombreUsuario
+Clase:  ServicioCrearUsuario.java
+Capa:   microservicio\dominio
+Ubica:  D:\Proyectos\Java\AtencionMedica\java-arquitectura-hexagonal\microservicio\dominio\src\main\java\com\ceiba\usuario\servicio\ServicioCrearUsuario.java
+
+Calse:  @Componente: ManejadorListarUsuarios Este pertenece a package com.ceiba.usuario.consulta; no se cambia pero se debe tener en cuanta
+
+Cambio: 
+Clase:  
+Capa:   
+Ubica:  
+
+Cambio: 
+Clase:  
+Capa:   
+Ubica:  
+
+APPLICATION
+
+Cambio: Se comentó el campo get.Fecha en el método crear()
+Clase:  FabricaUsuario.java
+Capa:   microservicio\Application
+Ubica:  D:\Proyectos\Java\AtencionMedica\java-arquitectura-hexagonal\microservicio\aplicacion\src\main\java\com\ceiba\usuario\comando\fabrica\FabricaUsuario.java
+
+Cambio: Actualiazación de los atributos
+Clase:  ComandoUsuario.java 
+Capa:   microservicio\application
+Ubica:  D:\Proyectos\Java\AtencionMedica\java-arquitectura-hexagonal\microservicio\aplicacion\src\main\java\com\ceiba\usuario\comando\ComandoUsuario.java
+
+INFRAESTRUCTURA
+ 
+Cambio: Se actauliza el metodo setIdUsuario(id) por setId(id)
+Clase:  ComandoControladorUsuario.java
+Capa:   microservicio\infraestructura
+Ubica:  D:\Proyectos\Java\AtencionMedica\java-arquitectura-hexagonal\microservicio\infraestructura\src\main\java\com\ceiba\usuario\controlador\ComandoControladorUsuario.java
+
+Cambio: Cambiar todas las sentencias SQL
+Clase:  actualizar.sql, crear.sql, eliminar.sql, ...
+Capa:   microservicio'infraestructura
+Ubica:  D:\Proyectos\Java\AtencionMedica\java-arquitectura-hexagonal\microservicio\infraestructura\src\main\resources\sql\usuario\listar.sql
+
+Cambio: Se comentó atributos y retorno DtoUsuario. Se cambió las el nombre de los campos "id" por "id_usuario" y "nombre" por "nombre_usuario"
+Clase:  MapeoUsuario.java
+Capa:   microservicio\Infraestructura
+Ubica:  D:\Proyectos\Java\AtencionMedica\java-arquitectura-hexagonal\microservicio\infraestructura\src\main\java\com\ceiba\usuario\adaptador\dao\MapeoUsuario.java
+
+Cambio: Se comentó atributos y retorno DtoUsuario. Se cambió las el nombre de los campos "id" por "idUsuario" y "nombre" por "nombreUsuario"
+Clase:  RepositorioUsuarioMysql.java
+Capa:   microservicio\infraestructura
+Ubica:  D:\Proyectos\Java\AtencionMedica\java-arquitectura-hexagonal\microservicio\infraestructura\src\main\java\com\ceiba\usuario\adaptador\repositorio\RepositorioUsuarioMysql.java
+
+
+TEST DOMINIO
+
+Cambio: Se eliminan los campos clave y fecha actualización y se actualizan id y nombre por idUsuario y nombreUsuario y el nombre de los metodos
+Clase:  UsuarioTestDataBuilder.java
+Capa:   microservicio\dominio\test
+Ubica:  D:\Proyectos\Java\AtencionMedica\java-arquitectura-hexagonal\microservicio\dominio\src\test\java\com\ceiba\usuario\servicio\testdatabuilder\UsuarioTestDataBuilder.java
+
+Cambio: Se eliminan los campos clave y fecha actualización y se actualizan id y nombre por idUsuario y nombreUsuario
+Clase:  UsuarioTest.java
+Capa:   microservicio\dominio\test
+Ubica:  D:\Proyectos\Java\AtencionMedica\java-arquitectura-hexagonal\microservicio\dominio\src\test\java\com\ceiba\usuario\entidad\UsuarioTest.java
+
+Cambio: Se comentó los test de clave fecha y se actualizaron los metodos
+Clase:  ServicioCrearUsuarioTest.java
+Capa:   microservicio\dominio\test
+Ubica:  D:\Proyectos\Java\AtencionMedica\java-arquitectura-hexagonal\microservicio\dominio\src\test\java\com\ceiba\usuario\servicio\ServicioCrearUsuarioTest.java
+
+Cambio: Se comentó los test de clave fecha y se actualizaron los metodos
+Clase:  ServicioCrearUsuarioTest.java
+Capa:   ServicioActualizarUsuarioTest.java
+Ubica:  D:\Proyectos\Java\AtencionMedica\java-arquitectura-hexagonal\microservicio\dominio\src\test\java\com\ceiba\usuario\servicio\ServicioActualizarUsuarioTest.java
+
+TEST INFRAESTRUCTURA
+
+Cambio: Se cambiaron los atributos y metodos
+Clase:  ComandoUsuarioTestDataBuilder.java
+Capa:   microservicio\test\usuario\servicio\
+Ubica:  D:\Proyectos\Java\AtencionMedica\java-arquitectura-hexagonal\microservicio\infraestructura\src\test\java\com\ceiba\usuario\servicio\testdatabuilder\ComandoUsuarioTestDataBuilder.java
+
+Cambio: 
+Clase:  
+Capa:   
+Ubica:  
+
+Cambio: 
+Clase:  
+Capa:   
+Ubica:  
+
+1. build.gradle(Aplicacion):
+repositories {
+	mavenCentral()
+}
+    .
+    .
+    .
+}
+
+dependencies {
+    compile("org.springframework.boot:spring-boot-starter-data-jpa:$project.ext.springBootVersion")
+}
+
+2. build.gradle(Aplicacion):
+repositories {
+	mavenCentral()
+}
+    .
+    .
+    .
+    implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+    implementation 'org.hibernate.javax.persistence:hibernate-jpa-2.1-api:1.0.2.Final'
+}
+
+dependencies {
+		implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+	}

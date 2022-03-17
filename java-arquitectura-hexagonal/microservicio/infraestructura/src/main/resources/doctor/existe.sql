@@ -1,0 +1,1 @@
+select count(1) from doctor where nombre_doctor = :nombreDoctor
