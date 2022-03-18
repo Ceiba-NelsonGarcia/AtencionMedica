@@ -41,14 +41,8 @@ xjava-arquitectura-hexagonal/microservicio/dominio/src/test/java/com/ceiba/usuar
 sjava-arquitectura-hexagonal/comun/comun-aplicacion/src/main/java/com/ceiba/manejador/ManejadorComandoRespuesta.java,9\0\908ce663177c1e5f8a90fb4f91a032fe6bd3701e
 ª
 äjava-arquitectura-hexagonal/comun/comun-infraestructura/src/main/java/com/ceiba/infraestructura/jdbc/CustomNamedParameterJdbcTemplate.java,0\3\0319f24b3ac7bd16cfaa5bc473946fbfd14c0137
-i
-9java-arquitectura-hexagonal/microservicio/settings.gradle,d\4\d4dc0d6080672c0582d363e7bab917968d71c680
-^
-.java-arquitectura-hexagonal/comun/build.gradle,b\1\b12fe0da37b8668523b267448d30bd3e1dc5711d
 o
 ?java-arquitectura-hexagonal/comun/comun-aplicacion/build.gradle,d\a\da139ec0d05fcac88b96961d12ff01c095ae9069
-q
-Ajava-arquitectura-hexagonal/microservicio/aplicacion/build.gradle,b\d\bd61d7fd681ec880e0dc886d01d66eaeb8ba54b9
 v
 Fjava-arquitectura-hexagonal/microservicio/infraestructura/build.gradle,b\9\b97d9679f681a830b2ff37c2b9ba131e92a3cda9
 õ
@@ -179,8 +173,6 @@ wjava-arquitectura-hexagonal/microservicio/infraestructura/src/main/java/com/cei
 Åjava-arquitectura-hexagonal/microservicio/aplicacion/src/main/java/com/ceiba/usuario/comando/manejador/ManejadorCrearUsuario.java,a\2\a2cf69275d7a7771d95bc64fc36d624c22f740c5
 µ
 Ñjava-arquitectura-hexagonal/microservicio/aplicacion/src/main/java/com/ceiba/usuario/comando/manejador/ManejadorEliminarUsuario.java,7\7\7747919e0651ff1b8312ea808406977b54cb9321
-©
-yjava-arquitectura-hexagonal/microservicio/infraestructura/src/main/java/com/ceiba/usuario/adaptador/dao/MapeoUsuario.java,5\b\5b934aec1e662beb2e7550f8768148b1b5059bca
 ¨
 |java-arquitectura-hexagonal/microservicio/infraestructura/src/main/java/com/ceiba/usuario/adaptador/dao/DaoUsuarioMysql.java,d\3\d32345e856db5d15e456ba30238c9145cad9123e
 Ω
