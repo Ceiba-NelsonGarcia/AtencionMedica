@@ -6,16 +6,16 @@ public interface RepositorioDoctor {
 
     /**
      * Permite crear un Doctor
-     * @param Doctor
+     * @param doctor
      * @return el id generado
      */
-    Long crearDoctor(Doctor Doctor);
+    Long crearDoctor(Doctor doctor);
 
     /**
      * Permite actualizar un Doctor
-     * @param Doctor
+     * @param doctor
      */
-    void actualizarDoctor(Doctor Doctor);
+    void actualizarDoctor(Doctor doctor);
 
     /**
      * Permite eliminar un Doctor

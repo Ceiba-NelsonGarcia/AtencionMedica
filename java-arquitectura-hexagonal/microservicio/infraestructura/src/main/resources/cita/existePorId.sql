@@ -1,0 +1,1 @@
+select count(1) from cita where id_cita = :idCita
