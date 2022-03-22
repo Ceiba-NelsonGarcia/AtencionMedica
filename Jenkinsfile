@@ -39,8 +39,8 @@ pipeline {
       steps{
         echo "------------>Compile & Unit Tests<------------"
 		sh 'chmod +x ./java-arquitectura-hexagonal/microservicio/gradlew'
-		sh './java-arquitectura-hexagonal/microservicio/gradlew --b ./microservicio/build.gradle clean'
-		sh './java-arquitectura-hexagonal/microservicio/gradlew --b ./microservicio/build.gradle test'
+		sh './java-arquitectura-hexagonal/microservicio/gradlew --b ./java-arquitectura-hexagonal/microservicio/build.gradle clean'
+		sh './java-arquitectura-hexagonal/microservicio/gradlew --b ./java-arquitectura-hexagonal/microservicio/build.gradle test'
       }
 	}
 
