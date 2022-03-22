@@ -57,7 +57,7 @@ pipeline {
       steps {
         echo "------------>Build<------------"
 		// Construir sin test
-		sh './microservicio/gradlew --b ./microservicio/build.gradle build -x test'
+		sh './java-arquitectura-hexagonal/microservicio/gradlew --b ./java-arquitectura-hexagonal/microservicio/build.gradle build -x test'
       }
     }
   }
