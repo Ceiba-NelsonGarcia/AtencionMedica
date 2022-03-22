@@ -29,14 +29,8 @@ jjava-arquitectura-hexagonal/microservicio/dominio/src/test/java/com/ceiba/usuar
 {java-arquitectura-hexagonal/microservicio/dominio/src/test/java/com/ceiba/usuario/servicio/ServicioEliminarUsuarioTest.java,7\0\707a54d084ca442c9b177eeb0b4beac20717b3c0
 ­
 }java-arquitectura-hexagonal/microservicio/dominio/src/test/java/com/ceiba/usuario/servicio/ServicioActualizarUsuarioTest.java,b\f\bf90b7b59414a520dd7b28f5ed437ae055c65210
-º
-‰java-arquitectura-hexagonal/microservicio/infraestructura/src/test/java/com/ceiba/usuario/controlador/ConsultaControladorUsuarioTest.java,d\f\dfb75b79ef8a8463c6dbf5b98948db4c44a9cc13
 ¨
 xjava-arquitectura-hexagonal/microservicio/dominio/src/test/java/com/ceiba/usuario/servicio/ServicioCrearUsuarioTest.java,5\f\5f54c79b623f00a4f3514575f849a7fc0f9e0412
-Æ
-•java-arquitectura-hexagonal/microservicio/infraestructura/src/test/java/com/ceiba/usuario/servicio/testdatabuilder/ComandoUsuarioTestDataBuilder.java,1\8\18b5cfc55c35b01fc3822b480a4d4c7b22f4e69e
-¹
-ˆjava-arquitectura-hexagonal/microservicio/infraestructura/src/test/java/com/ceiba/usuario/controlador/ComandoControladorUsuarioTest.java,4\e\4ebabfdfdc96b9ea409d51911b3b45a8825d8922
 £
 sjava-arquitectura-hexagonal/comun/comun-aplicacion/src/main/java/com/ceiba/manejador/ManejadorComandoRespuesta.java,9\0\908ce663177c1e5f8a90fb4f91a032fe6bd3701e
 »
