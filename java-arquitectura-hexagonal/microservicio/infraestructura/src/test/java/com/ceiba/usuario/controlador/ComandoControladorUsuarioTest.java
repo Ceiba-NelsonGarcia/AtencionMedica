@@ -31,13 +31,13 @@ class ComandoControladorUsuarioTest {
     @Autowired
     private MockMvc mocMvc;
 
-   /* @Test
+   /*@Test
     @DisplayName("Deberia crear un usuario")
     void deberiaCrearUnUsuario() throws Exception{
         // arrange
         ComandoUsuario usuario = new ComandoUsuarioTestDataBuilder().build();
         // act - assert
-        mocMvc.perform(post("/usuarios")
+        mocMvc.perform(post("/usuarios/crear")
                 .contentType(MediaType.APPLICATION_JSON)
                 .content(objectMapper.writeValueAsString(usuario)))
                 .andExpect(status().isOk())

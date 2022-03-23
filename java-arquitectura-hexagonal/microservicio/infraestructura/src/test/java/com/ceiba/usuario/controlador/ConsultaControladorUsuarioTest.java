@@ -27,7 +27,7 @@ class ConsultaControladorUsuarioTest {
     @Autowired
     private MockMvc mocMvc;
 
-   /* @Test
+    @Test
     @DisplayName("Deberia listar usuarios")
     void deberiaListarUsuarios() throws Exception {
         // arrange
@@ -36,10 +36,10 @@ class ConsultaControladorUsuarioTest {
                 .contentType(MediaType.APPLICATION_JSON))
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$", hasSize(1)))
-                .andExpect(jsonPath("$[0].nombre", is("test")))
-                .andExpect(jsonPath("$[0].id", is(1)));
+                .andExpect(jsonPath("$[0].nombreUsuario", is("test")))
+                .andExpect(jsonPath("$[0].idUsuario", is(1)));
 
-    }*/
+    }
 
 
 }

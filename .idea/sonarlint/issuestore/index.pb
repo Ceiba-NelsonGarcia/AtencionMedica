@@ -19,18 +19,10 @@ vjava-arquitectura-hexagonal/comun/comun-infraestructura/src/main/java/com/ceiba
 sjava-arquitectura-hexagonal/comun/comun-infraestructura/src/main/java/com/ceiba/infraestructura/actuator/Salud.java,a\0\a0fb975e5eb8dbf63978fe9cd49848c67bc4a9b7
 ‰
 Yjava-arquitectura-hexagonal/comun/comun-test/src/main/java/com/ceiba/core/BasePrueba.java,9\3\9320148b1e24151e449d234ed0e39f98dad4794a
-‰
-Yjava-arquitectura-hexagonal/microservicio/dominio/src/test/java/com/ceiba/BasePrueba.java,e\c\ec5c68cc3ca45346caf63e46c9b17e9be824224a
 ·
 †java-arquitectura-hexagonal/microservicio/dominio/src/test/java/com/ceiba/usuario/servicio/testdatabuilder/UsuarioTestDataBuilder.java,f\d\fd40c379ae9c3f00018b195d07a543835d3d03f7
-š
-jjava-arquitectura-hexagonal/microservicio/dominio/src/test/java/com/ceiba/usuario/entidad/UsuarioTest.java,7\c\7cc9e5bb268b0f05d002a451ea65779f76dc184c
-«
-{java-arquitectura-hexagonal/microservicio/dominio/src/test/java/com/ceiba/usuario/servicio/ServicioEliminarUsuarioTest.java,7\0\707a54d084ca442c9b177eeb0b4beac20717b3c0
 ­
 }java-arquitectura-hexagonal/microservicio/dominio/src/test/java/com/ceiba/usuario/servicio/ServicioActualizarUsuarioTest.java,b\f\bf90b7b59414a520dd7b28f5ed437ae055c65210
-¨
-xjava-arquitectura-hexagonal/microservicio/dominio/src/test/java/com/ceiba/usuario/servicio/ServicioCrearUsuarioTest.java,5\f\5f54c79b623f00a4f3514575f849a7fc0f9e0412
 £
 sjava-arquitectura-hexagonal/comun/comun-aplicacion/src/main/java/com/ceiba/manejador/ManejadorComandoRespuesta.java,9\0\908ce663177c1e5f8a90fb4f91a032fe6bd3701e
 »
@@ -57,8 +49,6 @@ jjava-arquitectura-hexagonal/comun/comun-aplicacion/src/main/java/com/ceiba/mane
 „java-arquitectura-hexagonal/microservicio/aplicacion/src/main/java/com/ceiba/doctor/comando/manejador/ManejadorActualizarDoctor.java,6\9\6915aa1828aaf3b13602541cf4f02bf2cb4bdee3
 ¡
 qjava-arquitectura-hexagonal/microservicio/infraestructura/src/main/java/com/ceiba/configuracion/BeanServicio.java,f\3\f3457f92f103e2a86f4dae3b82d33fcc18ffb3db
-‚
-Rjava-arquitectura-hexagonal/microservicio/src/main/java/com/ceiba/Application.java,6\d\6dc92ec4852c9fea83ef5d783c73fa6eb6f88f02
 ™
 ijava-arquitectura-hexagonal/microservicio/infraestructura/out/production/resources/doctor/existePorId.sql,5\6\56f88a71cc092e64f9221de0c6c9c214b128881b
 ”
