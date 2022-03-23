@@ -2,7 +2,6 @@ package com.ceiba.cita.modelo.entidad;
 
 import lombok.Getter;
 
-import java.sql.Time;
 import java.time.LocalDate;
 
 @Getter

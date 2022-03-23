@@ -21,7 +21,7 @@ public class DaoHorarioMysql implements DaoHorario {
     }
 
     @Override
-    public List<DtoHorario> ListarHorario() {
+    public List<DtoHorario> listarHorario() {
         return this.customNamedParameterJdbcTemplate.getNamedParameterJdbcTemplate().query(sqlListar, new MapeoHorario());
     }
 }

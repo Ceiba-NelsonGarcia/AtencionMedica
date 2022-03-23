@@ -10,5 +10,5 @@ public interface DaoTarifa {
      * @return Las Tarifas
      * */
 
-    List<DtoTarifa> ListarTarifa();
+    List<DtoTarifa> listarTarifa();
 }

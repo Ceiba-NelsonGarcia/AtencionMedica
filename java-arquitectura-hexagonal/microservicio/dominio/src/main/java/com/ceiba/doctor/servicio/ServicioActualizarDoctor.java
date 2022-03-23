@@ -14,13 +14,13 @@ public class ServicioActualizarDoctor {
         this.repositorioDoctor = repositorioDoctor;
     }
 
-    public void ejecutar(Doctor Doctor) {
-        validarExistenciaPrevia(Doctor);
-        this.repositorioDoctor.actualizarDoctor(Doctor);
+    public void ejecutar(Doctor doctor) {
+        validarExistenciaPrevia(doctor);
+        this.repositorioDoctor.actualizarDoctor(doctor);
     }
 
-    private void validarExistenciaPrevia(Doctor Doctor) {
-        boolean existe = this.repositorioDoctor.existeDoctorPorId(Doctor.getIdDoctor());
+    private void validarExistenciaPrevia(Doctor doctor) {
+        boolean existe = this.repositorioDoctor.existeDoctorPorId(doctor.getIdDoctor());
         if(!existe) {
             throw new ExcepcionDuplicidad(EL_DOCTOR_NO_EXISTE_EN_EL_SISTEMA);
         }

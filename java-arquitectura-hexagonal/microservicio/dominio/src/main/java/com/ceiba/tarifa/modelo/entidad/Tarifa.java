@@ -5,12 +5,12 @@ import lombok.Getter;
 @Getter
 public class Tarifa {
     private Long idTarifa;
-    private String tarifa;
+    private String nombreTarifa;
     private Long valorTarifa;
 
-    public Tarifa(Long idTarifa, String tarifa, Long valorTarifa) {
+    public Tarifa(Long idTarifa, String nombreTarifa, Long valorTarifa) {
         this.idTarifa = idTarifa;
-        this.tarifa = tarifa;
+        this.nombreTarifa = nombreTarifa;
         this.valorTarifa = valorTarifa;
     }
 }

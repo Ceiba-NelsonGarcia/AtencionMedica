@@ -7,7 +7,8 @@ import lombok.Getter;
 @AllArgsConstructor
 public class DtoHorario {
     private Long idHorario;
-    private String horario;
+    private String nombreHorario;
     private int horaInicial;
     private int horaFinal;
 }
+

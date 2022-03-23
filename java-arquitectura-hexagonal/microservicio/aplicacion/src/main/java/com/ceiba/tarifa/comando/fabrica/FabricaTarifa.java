@@ -9,7 +9,7 @@ public class FabricaTarifa {
     public Tarifa crearTarifa(ComandoTarifa comandoTarifa){
         return new Tarifa(
                 comandoTarifa.getIdTarifa(),
-                comandoTarifa.getTarifa(),
+                comandoTarifa.getNombreTarifa(),
                 comandoTarifa.getValorTarifa()
         );
     }

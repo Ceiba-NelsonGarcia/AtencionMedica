@@ -16,6 +16,6 @@ public class ManejadorListarTarifa {
     }
 
     public List<DtoTarifa> ejecutarTarifa(){
-        return this.daoTarifa.ListarTarifa();
+        return this.daoTarifa.listarTarifa();
     }
 }

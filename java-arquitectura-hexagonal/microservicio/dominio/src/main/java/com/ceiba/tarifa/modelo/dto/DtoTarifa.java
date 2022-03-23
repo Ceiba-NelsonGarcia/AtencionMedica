@@ -7,6 +7,6 @@ import lombok.Getter;
 @AllArgsConstructor
 public class DtoTarifa {
     private Long idTarifa;
-    private String tarifa;
+    private String nombreTarifa;
     private Long valorTarifa;
 }

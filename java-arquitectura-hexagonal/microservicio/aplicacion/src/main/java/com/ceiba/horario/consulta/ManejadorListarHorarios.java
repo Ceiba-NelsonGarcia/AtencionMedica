@@ -16,6 +16,6 @@ public class ManejadorListarHorarios {
     }
 
     public List<DtoHorario> ejecutar(){
-        return this.daoHorario.ListarHorario();
+        return this.daoHorario.listarHorario();
     }
 }

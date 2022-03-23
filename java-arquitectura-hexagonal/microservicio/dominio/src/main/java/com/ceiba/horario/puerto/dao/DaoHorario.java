@@ -10,5 +10,5 @@ public interface DaoHorario {
      * @return Los horarios
      * */
 
-    List<DtoHorario> ListarHorario();
+    List<DtoHorario> listarHorario();
 }

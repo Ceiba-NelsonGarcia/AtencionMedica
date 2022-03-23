@@ -1,2 +1,2 @@
-select id_horario, horario, hora_inicial, hora_final
+select id_horario, nombre_horario, hora_inicial, hora_final
 from horario

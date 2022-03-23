@@ -11,28 +11,28 @@ INSERT INTO `usuario` (`id_usuario`, `nombre_usuario`) VALUES (NULL, 'Tania Roja
 
 create table tarifa (
     id_tarifa int(11) not null auto_increment,
-    tarifa varchar(100) not null,
+    nombre_tarifa varchar(100) not null,
     valor_tarifa int(8) not null,
     primary key (id_tarifa)
 );
 
-INSERT INTO `tarifa` (`id_tarifa`, `tarifa`,`valor_tarifa`) VALUES (NULL, 'General', 50);
-INSERT INTO `tarifa` (`id_tarifa`, `tarifa`,`valor_tarifa`) VALUES (NULL, 'Espeialista', 60);
-INSERT INTO `tarifa` (`id_tarifa`, `tarifa`,`valor_tarifa`) VALUES (NULL, 'Hora Extra', 2);
-INSERT INTO `tarifa` (`id_tarifa`, `tarifa`,`valor_tarifa`) VALUES (NULL, 'No Habiles', 5);
-INSERT INTO `tarifa` (`id_tarifa`, `tarifa`,`valor_tarifa`) VALUES (NULL, 'No Habiles Extra', 7);
+INSERT INTO `tarifa` (`id_tarifa`, `nombre_tarifa`,`valor_tarifa`) VALUES (NULL, 'General', 50);
+INSERT INTO `tarifa` (`id_tarifa`, `nombre_tarifa`,`valor_tarifa`) VALUES (NULL, 'Espeialista', 60);
+INSERT INTO `tarifa` (`id_tarifa`, `nombre_tarifa`,`valor_tarifa`) VALUES (NULL, 'Hora Extra', 2);
+INSERT INTO `tarifa` (`id_tarifa`, `nombre_tarifa`,`valor_tarifa`) VALUES (NULL, 'No Habiles', 5);
+INSERT INTO `tarifa` (`id_tarifa`, `nombre_tarifa`,`valor_tarifa`) VALUES (NULL, 'No Habiles Extra', 7);
 
 create table horario (
     id_horario int(11) not null auto_increment,
-    horario varchar(100) not null,
+    nombre_horario varchar(100) not null,
     hora_inicial int(2) not null,
     hora_final int(2) not null,
     primary key (id_horario)
 );
 
-INSERT INTO `horario` (`id_horario`, `horario`,`hora_inicial`, `hora_final`) VALUES (NULL, 'Regular', 8, 17);
-INSERT INTO `horario` (`id_horario`, `horario`,`hora_inicial`, `hora_final`) VALUES (NULL, 'Extra Inicial', 0, 7);
-INSERT INTO `horario` (`id_horario`, `horario`,`hora_inicial`, `hora_final`) VALUES (NULL, 'Extra Final', 18, 24);
+INSERT INTO `horario` (`id_horario`, `nombre_horario`,`hora_inicial`, `hora_final`) VALUES (NULL, 'Regular', 8, 17);
+INSERT INTO `horario` (`id_horario`, `nombre_horario`,`hora_inicial`, `hora_final`) VALUES (NULL, 'Extra Inicial', 0, 7);
+INSERT INTO `horario` (`id_horario`, `nombre_horario`,`hora_inicial`, `hora_final`) VALUES (NULL, 'Extra Final', 18, 24);
 
 create table doctor (
     id_doctor int(11) not null auto_increment,

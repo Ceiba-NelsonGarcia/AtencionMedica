@@ -10,7 +10,7 @@ public class FabricaHorario {
     public Horario crear(ComandoHorario comandoHorario){
         return new Horario(
                 comandoHorario.getIdHorario(),
-                comandoHorario.getHorario(),
+                comandoHorario.getNombreHorario(),
                 comandoHorario.getHoraInicial(),
                 comandoHorario.getHoraFinal()
         );

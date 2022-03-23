@@ -12,7 +12,7 @@ import lombok.Setter;
 public class ComandoHorario {
 
     private Long idHorario;
-    private String horario;
+    private String nombreHorario;
     private int horaInicial;
     private int horaFinal;
 

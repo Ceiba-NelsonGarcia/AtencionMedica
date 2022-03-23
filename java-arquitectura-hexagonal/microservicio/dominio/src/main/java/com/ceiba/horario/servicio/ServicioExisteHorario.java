@@ -6,7 +6,7 @@ import com.ceiba.horario.puerto.repositorio.RepositorioHorario;
 
 public class ServicioExisteHorario {
 
-    private static final String El_HORARIO_NO_EXISTE_EN_EL_SISTEMA = "La_Horario_no_existe_en_el_sistema";
+    private static final String El_HORARIO_NO_EXISTE_EN_EL_SISTEMA = "El_Horario_no_existe_en_el_sistema";
 
     private RepositorioHorario repositorioHorario;
 
@@ -14,14 +14,14 @@ public class ServicioExisteHorario {
         this.repositorioHorario = repositorioHorario;
     }
 
-    //Metodo para entregar el Horario que se va a signar al Doctor
-    public void entregarHorario(Horario Horario){
-        validarExistenciaPreviaHorario(Horario);
-        this.repositorioHorario.existeHorarioPorId(Horario.getIdHorario());
+    //Metodo para entregar el horario que se va a signar al Doctor
+    public void entregarHorario(Horario horario){
+        validarExistenciaPreviaHorario(horario);
+        this.repositorioHorario.existeHorarioPorId(horario.getIdHorario());
     }
 
-    public void validarExistenciaPreviaHorario(Horario Horario) {
-        boolean existe = this.repositorioHorario.existeHorarioPorId(Horario.getIdHorario());
+    public void validarExistenciaPreviaHorario(Horario horario) {
+        boolean existe = this.repositorioHorario.existeHorarioPorId(horario.getIdHorario());
         if (!existe ) {
             throw new ExcepcionDuplicidad(El_HORARIO_NO_EXISTE_EN_EL_SISTEMA);
         }

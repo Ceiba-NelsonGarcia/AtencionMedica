@@ -12,9 +12,9 @@ public class MapeoTarifa implements RowMapper<DtoTarifa>, MapperResult {
     public DtoTarifa mapRow(ResultSet resultSet, int rowNum) throws SQLException{
 
         Long idTarifa = resultSet.getLong("id_tarifa");
-        String tarifa = resultSet.getString("tarifa");
+        String nombreTarifa = resultSet.getString("" + "nombre_tarifa");
         Long valorTarifa = resultSet.getLong("valor_tarifa");
 
-        return new DtoTarifa(idTarifa,tarifa,valorTarifa);
+        return new DtoTarifa(idTarifa,nombreTarifa,valorTarifa);
     }
 }

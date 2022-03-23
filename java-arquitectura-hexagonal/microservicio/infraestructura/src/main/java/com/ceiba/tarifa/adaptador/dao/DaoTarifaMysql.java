@@ -21,7 +21,7 @@ public class DaoTarifaMysql implements DaoTarifa {
     }
 
     @Override
-    public List<DtoTarifa> ListarTarifa(){
+    public List<DtoTarifa> listarTarifa(){
         return this.customNamedParameterJdbcTemplate.getNamedParameterJdbcTemplate().query(sqlListar, new MapeoTarifa());
     }
 }

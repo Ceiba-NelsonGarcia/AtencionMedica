@@ -6,14 +6,15 @@ import lombok.Getter;
 public class Horario {
 
     private Long idHorario;
-    private String horario;
+    private String nombreHorario;
     private int horaInicial;
     private int horaFinal;
 
     public Horario(Long idHorario, String horario, int horaInicial, int horaFinal) {
         this.idHorario = idHorario;
-        this.horario = horario;
+        this.nombreHorario = horario;
         this.horaInicial = horaInicial;
         this.horaFinal = horaFinal;
     }
 }
+

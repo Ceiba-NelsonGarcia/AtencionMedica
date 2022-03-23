@@ -6,6 +6,6 @@ import lombok.Data;
 public class ComandoTarifa {
 
     private Long idTarifa;
-    private String tarifa;
+    private String nombreTarifa;
     private Long valorTarifa;
 }

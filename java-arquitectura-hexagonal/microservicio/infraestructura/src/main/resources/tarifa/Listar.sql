@@ -1,2 +1,2 @@
-select id_tarifa, tarifa, valor_tarifa
+select id_tarifa, nombre_tarifa, valor_tarifa
 from tarifa

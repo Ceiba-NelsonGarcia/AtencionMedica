@@ -12,11 +12,11 @@ public class MapeoHorario implements RowMapper<DtoHorario>, MapperResult {
     public DtoHorario mapRow(ResultSet resultSet, int rowNum) throws SQLException {
 
         Long idHorario = resultSet.getLong("id_Horario");
-        String horario = resultSet.getString("horario");
+        String nombreHorario = resultSet.getString("nombre_horario");
         int horarInicial = resultSet.getInt("hora_inicial");
         int horarFinal = resultSet.getInt("hora_final");
 
-        return new DtoHorario(idHorario,horario,horarInicial,horarFinal);
+        return new DtoHorario(idHorario,nombreHorario,horarInicial,horarFinal);
     }
 
 }
