@@ -15,7 +15,6 @@ public class DiaSemanaTest {
         //arrange
         LocalDate fechaCita = LocalDate.parse("2022-03-24");
         //act - assert
-        assertEquals(5, DiaSemana.obtenerNumeroDiaSemana(fechaCita));
-
+        assertEquals(4, DiaSemana.obtenerNumeroDiaSemana(fechaCita));
     }
 }

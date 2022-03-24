@@ -6,7 +6,7 @@ import com.ceiba.dominio.excepcion.ExcepcionDuplicidad;
 
 public class ServicioActualizarCita {
 
-    private static final String EL_CITA_NO_EXISTE_EN_EL_SISTEMA = "El no cita existe en el sistema";
+    private static final String LA_CITA_NO_EXISTE_EN_EL_SISTEMA = "La cita existe en el sistema";
 
     private final RepositorioCita repositorioCita;
 
@@ -22,7 +22,7 @@ public class ServicioActualizarCita {
     private void validarExistenciaPrevia(Cita cita) {
         boolean existe = this.repositorioCita.existeCitaPorId(cita.getIdCita());
         if(!existe) {
-            throw new ExcepcionDuplicidad(EL_CITA_NO_EXISTE_EN_EL_SISTEMA);
+            throw new ExcepcionDuplicidad(LA_CITA_NO_EXISTE_EN_EL_SISTEMA);
         }
     }
 }

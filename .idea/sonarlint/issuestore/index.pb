@@ -83,8 +83,6 @@ Ujava-arquitectura-hexagonal/microservicio/out/production/resources/logback-spri
 ljava-arquitectura-hexagonal/microservicio/dominio/src/main/java/com/ceiba/usuario/modelo/dto/DtoUsuario.java,4\0\40dff0d2331854c91264f4acf15f1c04eaafeb66
 œ
 ljava-arquitectura-hexagonal/microservicio/dominio/src/main/java/com/ceiba/usuario/puerto/dao/DaoUsuario.java,3\b\3b46c7916b798fa8652f724f346dc4b8778985d6
-©
-yjava-arquitectura-hexagonal/microservicio/dominio/src/main/java/com/ceiba/usuario/servicio/ServicioActualizarUsuario.java,b\a\ba91e2403ab2b3c5d9dc2dd794e98f54ea445a24
 ¥
 ujava-arquitectura-hexagonal/microservicio/dominio/src/main/java/com/ceiba/doctor/servicio/ServicioEliminarDoctor.java,c\8\c8058af4f88bf9904f2b4e8b2a874af918d9f68d
  
@@ -93,8 +91,6 @@ pjava-arquitectura-hexagonal/microservicio/aplicacion/src/main/java/com/ceiba/us
 xjava-arquitectura-hexagonal/microservicio/aplicacion/src/main/java/com/ceiba/usuario/comando/fabrica/FabricaUsuario.java,c\7\c79029880dfc65d04491400f037585b0be0548d8
 ¬
 |java-arquitectura-hexagonal/microservicio/dominio/src/main/java/com/ceiba/usuario/puerto/repositorio/RepositorioUsuario.java,c\e\cebc5aa0689e5af9883bee379a973a1a468c9f09
-¤
-tjava-arquitectura-hexagonal/microservicio/dominio/src/main/java/com/ceiba/usuario/servicio/ServicioCrearUsuario.java,4\3\43a8e040389ef9a73a41c6568bf675a6abc0ea3c
 ª
 zjava-arquitectura-hexagonal/microservicio/aplicacion/src/main/java/com/ceiba/usuario/consulta/ManejadorListarUsuarios.java,5\f\5f78d75ddf0e8b512b06e313875a1aff50ae341b
 §
@@ -145,10 +141,6 @@ djava-arquitectura-hexagonal/microservicio/infraestructura/out/production/resour
 ajava-arquitectura-hexagonal/microservicio/infraestructura/out/production/resources/cita/crear.sql,5\4\541a7f581fa1175cc684a59e4a92cfaf68769ede
 ·
 †java-arquitectura-hexagonal/microservicio/infraestructura/src/main/java/com/ceiba/cita/adaptador/repositorio/RepositorioCitaMysql.java,6\d\6d013af7a60012f86e4f18e0eab320ba45ba977e
-«
-{java-arquitectura-hexagonal/microservicio/dominio/src/test/java/com/ceiba/usuario/servicio/ServicioEliminarUsuarioTest.java,7\0\707a54d084ca442c9b177eeb0b4beac20717b3c0
-­
-}java-arquitectura-hexagonal/microservicio/dominio/src/test/java/com/ceiba/usuario/servicio/ServicioActualizarUsuarioTest.java,b\f\bf90b7b59414a520dd7b28f5ed437ae055c65210
 ž
 njava-arquitectura-hexagonal/microservicio/dominio/src/main/java/com/ceiba/cita/servicio/ServicioCrearCita.java,e\4\e48182f7f77f0ee08ed04d0e0212d8d8406dc7cb
 ®

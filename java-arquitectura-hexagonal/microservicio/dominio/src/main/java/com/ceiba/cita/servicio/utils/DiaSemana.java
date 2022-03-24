@@ -8,10 +8,11 @@ import java.time.LocalDate;
 
 public class DiaSemana {
 
+    private DiaSemana() {
+    }
+
     public static int obtenerNumeroDiaSemana(LocalDate fechaCita){
 
-        fechaCita = LocalDate.now ();
-        fechaCita = fechaCita.plusDays ( 1 );
-        return fechaCita.getDayOfWeek ().getValue ();
+       return fechaCita.getDayOfWeek ().getValue ();
     }
 }

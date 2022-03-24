@@ -24,6 +24,9 @@ repositories {
 }
 
 dependencies {
+	implementation 'org.junit.jupiter:junit-jupiter:5.8.1'
+	implementation 'org.testng:testng:7.1.0'
+	implementation 'org.junit.jupiter:junit-jupiter:5.8.1'
 	testImplementation project.ext.springboottest
 	testImplementation project.ext.mockitocore
 	testImplementation project.ext.mockitoinline
@@ -31,7 +34,6 @@ dependencies {
 	testImplementation project(':comun:comun-test')
 
 	implementation project(':comun:comun-dominio')
-	//implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
 
 	compileOnly project.ext.lombok
 	annotationProcessor project.ext.lombok

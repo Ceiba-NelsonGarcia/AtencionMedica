@@ -8,7 +8,7 @@ import java.time.LocalDate;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class ServicioCrearCitaTest {
+class ServicioCrearCitaTest {
     @Test
     @DisplayName("Deberia devolver el numero de dia de la semana correcto, dada una fecha")
     void deberiaDevolveElNumeroDeDíaDeLaSemanaCorrectoDadaUnaFecha() {

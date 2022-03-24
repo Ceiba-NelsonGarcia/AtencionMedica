@@ -5,11 +5,11 @@ import org.junit.jupiter.api.Test;
 
 public class PorcentajeTarifaDiaTest {
 
-    @Test
+ /*   @Test
     @DisplayName("Deberia devolver el IdTarifa de acuerdo al dia de la semana")
     void deberiaDevolverElIdTarifaDeAcuerdoAlDiaDeLaSemana(){
         //Arrange
 
         // Act - Assert
-    }
+    }*/
 }
