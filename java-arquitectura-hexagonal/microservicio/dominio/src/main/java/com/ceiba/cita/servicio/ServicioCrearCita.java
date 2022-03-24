@@ -4,6 +4,11 @@ import com.ceiba.cita.modelo.entidad.Cita;
 import com.ceiba.cita.puerto.repositorio.RepositorioCita;
 import com.ceiba.dominio.excepcion.ExcepcionDuplicidad;
 
+/**
+ * @author nelson.garcia
+ * Se crea la lógica de negocio para crer la cita
+ * */
+
 public class ServicioCrearCita {
 
     private static final String EL_CITA_YA_EXISTE_EN_EL_SISTEMA = "El cita ya existe en el sistema";

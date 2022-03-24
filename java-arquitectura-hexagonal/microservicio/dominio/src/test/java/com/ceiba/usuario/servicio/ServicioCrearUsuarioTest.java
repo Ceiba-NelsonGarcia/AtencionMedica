@@ -23,6 +23,10 @@ public class ServicioCrearUsuarioTest {
         BasePrueba.assertThrows(usuarioTestDataBuilder::build, ExcepcionLongitudValor.class, "La clave debe tener una longitud mayor o igual a 4");
     }*/
 
+    void main(String[] args) {
+
+    }
+
     @Test
     @DisplayName("Deberia lanzar una exepcion cuando se valide la existencia del Usuario")
     void deberiaLanzarUnaExepcionCuandoSeValideLaExistenciaDelUsuario() {

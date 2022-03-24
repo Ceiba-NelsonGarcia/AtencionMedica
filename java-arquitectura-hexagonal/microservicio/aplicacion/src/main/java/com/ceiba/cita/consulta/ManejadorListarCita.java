@@ -1,4 +1,4 @@
-package com.ceiba.cita.conaulta;
+package com.ceiba.cita.consulta;
 
 import com.ceiba.cita.modelo.dto.DtoCita;
 import com.ceiba.cita.puerto.dao.DaoCita;
