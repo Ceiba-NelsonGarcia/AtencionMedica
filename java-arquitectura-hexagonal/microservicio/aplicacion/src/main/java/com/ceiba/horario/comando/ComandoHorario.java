@@ -13,7 +13,7 @@ public class ComandoHorario {
 
     private Long idHorario;
     private String nombreHorario;
-    private int horaInicial;
-    private int horaFinal;
+    private Integer horaInicial;
+    private Integer horaFinal;
 
 }

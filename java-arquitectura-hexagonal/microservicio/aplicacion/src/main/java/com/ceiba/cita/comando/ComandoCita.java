@@ -16,8 +16,8 @@ public class ComandoCita {
     private Long idUsuario;
     private Long idDoctor;
     private LocalDate fechaCita;
-    private int horaInicial;
-    private int horaFinal;
+    private Integer horaInicial;
+    private Integer horaFinal;
     private Double valorUsd;
     private Double valorCop;
 }

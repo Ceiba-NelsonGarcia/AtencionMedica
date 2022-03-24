@@ -20,7 +20,6 @@ INSERT INTO `tarifa` (`id_tarifa`, `nombre_tarifa`,`valor_tarifa`) VALUES (NULL,
 INSERT INTO `tarifa` (`id_tarifa`, `nombre_tarifa`,`valor_tarifa`) VALUES (NULL, 'Espeialista', 60);
 INSERT INTO `tarifa` (`id_tarifa`, `nombre_tarifa`,`valor_tarifa`) VALUES (NULL, 'Hora Extra', 2);
 INSERT INTO `tarifa` (`id_tarifa`, `nombre_tarifa`,`valor_tarifa`) VALUES (NULL, 'No Habiles', 5);
-INSERT INTO `tarifa` (`id_tarifa`, `nombre_tarifa`,`valor_tarifa`) VALUES (NULL, 'No Habiles Extra', 7);
 
 create table horario (
     id_horario int(11) not null auto_increment,

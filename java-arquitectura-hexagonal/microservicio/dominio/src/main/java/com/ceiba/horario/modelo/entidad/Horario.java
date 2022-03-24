@@ -7,10 +7,10 @@ public class Horario {
 
     private Long idHorario;
     private String nombreHorario;
-    private int horaInicial;
-    private int horaFinal;
+    private Integer horaInicial;
+    private Integer horaFinal;
 
-    public Horario(Long idHorario, String horario, int horaInicial, int horaFinal) {
+    public Horario(Long idHorario, String horario, Integer horaInicial, Integer horaFinal) {
         this.idHorario = idHorario;
         this.nombreHorario = horario;
         this.horaInicial = horaInicial;

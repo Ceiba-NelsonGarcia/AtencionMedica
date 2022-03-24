@@ -19,8 +19,8 @@ public class MapeoCita implements RowMapper<DtoCita>, MapperResult {
         Long idUsuario = resultSet.getLong("id_usuario");
         Long idDoctor = resultSet.getLong("id_doctor");
         LocalDate fechaCita = extraerLocalDate(resultSet, "fecha_cita");
-        int horaInicial = resultSet.getInt("hora_inicial");
-        int horaFinal = resultSet.getInt("hora_final");
+        Integer horaInicial = resultSet.getInt("hora_inicial");
+        Integer horaFinal = resultSet.getInt("hora_final");
         Double valorUsd = resultSet.getDouble("valor_usd");
         Double valorCop = resultSet.getDouble("valor_cop");
 

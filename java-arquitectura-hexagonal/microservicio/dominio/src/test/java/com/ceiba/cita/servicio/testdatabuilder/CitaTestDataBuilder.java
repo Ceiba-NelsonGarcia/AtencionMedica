@@ -1,7 +1,6 @@
 package com.ceiba.cita.servicio.testdatabuilder;
 
 import com.ceiba.cita.modelo.entidad.Cita;
-import com.ceiba.usuario.modelo.entidad.Usuario;
 
 import java.time.LocalDate;
 
@@ -11,8 +10,8 @@ public class CitaTestDataBuilder {
     private Long idUsuario;
     private Long idDoctor;
     private LocalDate fechaCita;
-    private int horaInicial;
-    private int horaFinal;
+    private Integer horaInicial;
+    private Integer horaFinal;
     private Double valorUsd;
     private Double valorCop;
 
@@ -48,12 +47,12 @@ public class CitaTestDataBuilder {
         return this;
     }
 
-    public CitaTestDataBuilder conHoraInicial(int horaInicial) {
+    public CitaTestDataBuilder conHoraInicial(Integer horaInicial) {
         this.horaInicial = horaInicial;
         return this;
     }
 
-    public CitaTestDataBuilder conHoraFinal(int horaFinal) {
+    public CitaTestDataBuilder conHoraFinal(Integer horaFinal) {
         this.horaFinal = horaFinal;
         return this;
     }

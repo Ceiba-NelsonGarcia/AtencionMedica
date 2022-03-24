@@ -68,14 +68,14 @@ public class CitaTest {
         BasePrueba.assertThrows(()->{
                     citaTestDataBuilder.buildCita();
                 },
-                ExcepcionValorObligatorio.class, "Se debe ingresar la FechaCita de la Cita");
+                ExcepcionValorObligatorio.class, "Se debe ingresar la Fecha de la Cita");
     }
 
     @Test
     void deberiaFallarSinHoraInicial(){
 
         // arrange
-        CitaTestDataBuilder citaTestDataBuilder = new CitaTestDataBuilder().conHoraInicial(0).conIdCita(1L);
+        CitaTestDataBuilder citaTestDataBuilder = new CitaTestDataBuilder().conHoraInicial(null).conIdCita(1L);
         // act - assert
         BasePrueba.assertThrows(()->{
                     citaTestDataBuilder.buildCita();
@@ -87,7 +87,7 @@ public class CitaTest {
     void deberiaFallarSinHoraFinal(){
 
         // arrange
-        CitaTestDataBuilder citaTestDataBuilder = new CitaTestDataBuilder().conHoraFinal(0).conIdCita(1L);
+        CitaTestDataBuilder citaTestDataBuilder = new CitaTestDataBuilder().conHoraFinal(null).conIdCita(1L);
         // act - assert
         BasePrueba.assertThrows(()->{
                     citaTestDataBuilder.buildCita();

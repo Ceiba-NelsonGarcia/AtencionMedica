@@ -13,8 +13,8 @@ public class MapeoHorario implements RowMapper<DtoHorario>, MapperResult {
 
         Long idHorario = resultSet.getLong("id_Horario");
         String nombreHorario = resultSet.getString("nombre_horario");
-        int horarInicial = resultSet.getInt("hora_inicial");
-        int horarFinal = resultSet.getInt("hora_final");
+        Integer horarInicial = resultSet.getInt("hora_inicial");
+        Integer horarFinal = resultSet.getInt("hora_final");
 
         return new DtoHorario(idHorario,nombreHorario,horarInicial,horarFinal);
     }
