@@ -11,6 +11,7 @@ public class ServicioExisteTarifa {
     private RepositorioTarifa repositorioTarifa;
 
     public ServicioExisteTarifa(RepositorioTarifa repositorioTarifa) {
+
         this.repositorioTarifa = repositorioTarifa;
     }
 

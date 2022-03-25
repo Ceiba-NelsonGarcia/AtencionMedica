@@ -19,8 +19,6 @@ vjava-arquitectura-hexagonal/comun/comun-infraestructura/src/main/java/com/ceiba
 sjava-arquitectura-hexagonal/comun/comun-infraestructura/src/main/java/com/ceiba/infraestructura/actuator/Salud.java,a\0\a0fb975e5eb8dbf63978fe9cd49848c67bc4a9b7
 ‰
 Yjava-arquitectura-hexagonal/comun/comun-test/src/main/java/com/ceiba/core/BasePrueba.java,9\3\9320148b1e24151e449d234ed0e39f98dad4794a
-£
-sjava-arquitectura-hexagonal/comun/comun-aplicacion/src/main/java/com/ceiba/manejador/ManejadorComandoRespuesta.java,9\0\908ce663177c1e5f8a90fb4f91a032fe6bd3701e
 »
 Šjava-arquitectura-hexagonal/comun/comun-infraestructura/src/main/java/com/ceiba/infraestructura/jdbc/CustomNamedParameterJdbcTemplate.java,0\3\0319f24b3ac7bd16cfaa5bc473946fbfd14c0137
 o
@@ -135,7 +133,3 @@ fjava-arquitectura-hexagonal/microservicio/infraestructura/out/production/resour
 djava-arquitectura-hexagonal/microservicio/infraestructura/out/production/resources/cita/eliminar.sql,b\2\b221484e0dae187b3a314e89b6c116803c500516
 ‘
 ajava-arquitectura-hexagonal/microservicio/infraestructura/out/production/resources/cita/crear.sql,5\4\541a7f581fa1175cc684a59e4a92cfaf68769ede
-ž
-njava-arquitectura-hexagonal/microservicio/dominio/src/main/java/com/ceiba/cita/servicio/ServicioCrearCita.java,e\4\e48182f7f77f0ee08ed04d0e0212d8d8406dc7cb
-®
-~java-arquitectura-hexagonal/microservicio/infraestructura/src/main/java/com/ceiba/cita/controlador/ComandoControladorCita.java,6\6\66b1f7c892f3ca7aef14230835ed98fc29fe6bfc
