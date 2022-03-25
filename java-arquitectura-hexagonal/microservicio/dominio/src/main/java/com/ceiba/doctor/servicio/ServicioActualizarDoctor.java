@@ -6,7 +6,7 @@ import com.ceiba.dominio.excepcion.ExcepcionDuplicidad;
 
 public class ServicioActualizarDoctor {
 
-    private static final String EL_DOCTOR_NO_EXISTE_EN_EL_SISTEMA = "El Doctor no existe en el sistema";
+    private static final String EL_DOCTOR_NO_EXISTE_EN_EL_SISTEMA = "El no doctor existe en el sistema";
 
     private final RepositorioDoctor repositorioDoctor;
 

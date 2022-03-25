@@ -49,7 +49,7 @@ public class RepositorioDoctorMysql implements RepositorioDoctor {
         MapSqlParameterSource paramSource = new MapSqlParameterSource();
         paramSource.addValue("nombreDoctor", nombreDoctor);
 
-        return this.customNamedParameterJdbcTemplate.getNamedParameterJdbcTemplate().queryForObject(sqlExiste,paramSource, Boolean.class);
+        return Boolean.TRUE.equals(this.customNamedParameterJdbcTemplate.getNamedParameterJdbcTemplate().queryForObject(sqlExiste, paramSource, Boolean.class));
     }
 
     @Override
@@ -62,6 +62,6 @@ public class RepositorioDoctorMysql implements RepositorioDoctor {
         MapSqlParameterSource paramSource = new MapSqlParameterSource();
         paramSource.addValue("idDoctor", idDoctor);
 
-        return this.customNamedParameterJdbcTemplate.getNamedParameterJdbcTemplate().queryForObject(sqlExistePorId,paramSource, Boolean.class);
+        return Boolean.TRUE.equals(this.customNamedParameterJdbcTemplate.getNamedParameterJdbcTemplate().queryForObject(sqlExistePorId, paramSource, Boolean.class));
     }
 }

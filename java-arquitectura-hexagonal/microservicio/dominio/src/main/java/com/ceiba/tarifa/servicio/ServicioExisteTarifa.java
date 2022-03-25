@@ -6,7 +6,7 @@ import com.ceiba.tarifa.modelo.entidad.Tarifa;
 
 public class ServicioExisteTarifa {
 
-    private static final String LA_TARIFA_NO_EXISTE_EN_EL_SISTEMA = "La_tarifa_no_existe_en_el_sistema";
+    private static final String LA_TARIFA_NO_EXISTE_EN_EL_SISTEMA = "La tarifa no existe en el sistema";
 
     private RepositorioTarifa repositorioTarifa;
 

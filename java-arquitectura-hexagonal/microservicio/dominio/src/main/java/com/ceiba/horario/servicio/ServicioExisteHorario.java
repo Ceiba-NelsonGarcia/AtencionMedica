@@ -6,7 +6,7 @@ import com.ceiba.horario.puerto.repositorio.RepositorioHorario;
 
 public class ServicioExisteHorario {
 
-    private static final String EL_HORARIO_NO_EXISTE_EN_EL_SISTEMA = "El_Horario_no_existe_en_el_sistema";
+    private static final String EL_HORARIO_NO_EXISTE_EN_EL_SISTEMA = "El Horario no existe en el sistema";
 
     private RepositorioHorario repositorioHorario;
 

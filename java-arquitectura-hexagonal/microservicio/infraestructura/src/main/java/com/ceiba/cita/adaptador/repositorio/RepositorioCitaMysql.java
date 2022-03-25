@@ -10,6 +10,7 @@ import org.springframework.stereotype.Repository;
 @Repository
 public class RepositorioCitaMysql implements RepositorioCita {
 
+    private static final String IDCITA = "idCita";
     private final CustomNamedParameterJdbcTemplate customNamedParameterJdbcTemplate;
 
     @SqlStatement(namespace="cita", value="crear")
@@ -39,7 +40,7 @@ public class RepositorioCitaMysql implements RepositorioCita {
     @Override
     public void eliminarCita(Long idCita) {
         MapSqlParameterSource paramSource = new MapSqlParameterSource();
-        paramSource.addValue("idCita", idCita);
+        paramSource.addValue(IDCITA, idCita);
 
         this.customNamedParameterJdbcTemplate.getNamedParameterJdbcTemplate().update(sqlEliminar, paramSource);
     }
@@ -47,7 +48,7 @@ public class RepositorioCitaMysql implements RepositorioCita {
     @Override
     public boolean existe(Long idCita) {
         MapSqlParameterSource paramSource = new MapSqlParameterSource();
-        paramSource.addValue("idCita", idCita);
+        paramSource.addValue(IDCITA, idCita);
 
         return this.customNamedParameterJdbcTemplate.getNamedParameterJdbcTemplate().queryForObject(sqlExiste,paramSource, Boolean.class);
     }
@@ -60,7 +61,7 @@ public class RepositorioCitaMysql implements RepositorioCita {
     @Override
     public boolean existeCitaPorId(Long idCita) {
         MapSqlParameterSource paramSource = new MapSqlParameterSource();
-        paramSource.addValue("idCita", idCita);
+        paramSource.addValue(IDCITA, idCita);
 
         return this.customNamedParameterJdbcTemplate.getNamedParameterJdbcTemplate().queryForObject(sqlExistePorId,paramSource, Boolean.class);
     }

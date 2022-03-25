@@ -24,11 +24,13 @@ public class Cita {
 
     public Cita(Long idCita, Long idUsuario, Long idDoctor, LocalDate fechaCita, Integer horaInicial, Integer horaFinal,
                 Double valorUsd, Double valorCop) {
+
         validarObligatorio(idUsuario, SE_DEBE_INGRESAR_EL_IDUSUARIO_DE_USUARIO);
         validarObligatorio(idDoctor, SE_DEBE_INGRESAR_EL_IDDOCTOR_DE_DOCTOR);
         validarObligatorio(fechaCita, SE_DEBE_INGRESAR_LA_FECHA_DE_LA_CITA);
         validarObligatorio(horaInicial, SE_DEBE_INGRESAR_LA_HORAINICIAL_DE_LA_CITA);
         validarObligatorio(horaFinal, SE_DEBE_INGRESAR_LA_HORAFINAL_DE_LA_CITA);
+
         this.idCita = idCita;
         this.idUsuario = idUsuario;
         this.idDoctor = idDoctor;

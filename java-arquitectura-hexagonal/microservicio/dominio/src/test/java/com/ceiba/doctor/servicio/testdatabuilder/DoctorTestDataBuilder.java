@@ -1,11 +1,13 @@
 package com.ceiba.doctor.servicio.testdatabuilder;
 
+import com.ceiba.doctor.modelo.entidad.Doctor;
+
 public class DoctorTestDataBuilder {
 
-    private Long idDoctor;
-    private String nombreDoctor;
-    private Long idTarifa;
-    private Long idHorario;
+    private Long    idDoctor;
+    private String  nombreDoctor;
+    private Long    idTarifa;
+    private Long    idHorario;
 
     public DoctorTestDataBuilder() {
         this.idDoctor = 1L;
@@ -32,5 +34,9 @@ public class DoctorTestDataBuilder {
     public DoctorTestDataBuilder conIdHorario(Long idHorario) {
         this.idHorario = idHorario;
         return this;
+    }
+
+    public Doctor builDoctor(){
+        return new Doctor(idDoctor, nombreDoctor, idTarifa, idHorario);
     }
 }
