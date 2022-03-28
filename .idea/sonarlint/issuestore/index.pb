@@ -125,8 +125,6 @@ Yjava-arquitectura-hexagonal/microservicio/dominio/src/test/java/com/ceiba/BaseP
 mjava-arquitectura-hexagonal/microservicio/dominio/src/main/java/com/ceiba/horario/modelo/entidad/Horario.java,2\4\24d41306e9f1ae1b8ff8c3bcc1d59d265dac7f2a
 ¥
 ujava-arquitectura-hexagonal/microservicio/dominio/src/main/java/com/ceiba/horario/servicio/ServicioExisteHorario.java,e\9\e9d5bbbbd3b568d78f1ace7bdcd32821ff8e2c22
-¹
-ˆjava-arquitectura-hexagonal/microservicio/infraestructura/src/test/java/com/ceiba/usuario/controlador/ComandoControladorUsuarioTest.java,4\e\4ebabfdfdc96b9ea409d51911b3b45a8825d8922
 ¡
 qjava-arquitectura-hexagonal/microservicio/dominio/src/main/java/com/ceiba/cita/servicio/ServicioEliminarCita.java,2\3\230fa9487087f111144fe77e11f33415817aab68
 ª
