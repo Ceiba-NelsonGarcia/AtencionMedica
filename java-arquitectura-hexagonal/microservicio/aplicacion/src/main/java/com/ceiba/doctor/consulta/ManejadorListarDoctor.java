@@ -18,4 +18,8 @@ public class ManejadorListarDoctor {
     public List<DtoDoctor> ejecutar(){
         return this.daoDoctor.listarDoctor();
     }
+
+    public List<DtoDoctor> ejecutarPorId(Long IdDoctor){
+        return this.daoDoctor.listarDoctorPorId(IdDoctor);
+    }
 }

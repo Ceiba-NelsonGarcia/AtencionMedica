@@ -5,20 +5,20 @@ import com.ceiba.cita.servicio.testdatabuilder.CitaTestDataBuilder;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mockito;
+
+import java.time.LocalDate;
+
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-class TarifaDoctorTest {
+public class ValorCitaUSDTest {
 
     @Test
-    @DisplayName("Deberia devolver la tarifa del horario doctor si es Regular 0 Extra")
-    void deberiaDevolverLaTarifaHorarioDelDoctorRegularExtra() {
+    @DisplayName("Deberia devolver el valor de la cita en usd")
+    void deberiaDevolverElcalculoValorCitaEnUsd() {
         //arrange
         Cita cita = new CitaTestDataBuilder().buildCita();
         ValorCitaUSD valorCitaUSD = Mockito.mock(ValorCitaUSD.class);
-        TarifaHorarioDoctor tarifaHorarioDoctor = Mockito.mock(TarifaHorarioDoctor.class);
         //act - assert
-        assertEquals(0L, tarifaHorarioDoctor.obtenerTarifaHorarioDoctor(0L));
-        assertEquals(0L, tarifaHorarioDoctor.obtenerTarifaHorarioDoctor(1L));
-        assertEquals(0L, tarifaHorarioDoctor.obtenerTarifaHorarioDoctor(3L));
+        assertEquals(0, valorCitaUSD.obtenerValorCita(cita));
     }
 }

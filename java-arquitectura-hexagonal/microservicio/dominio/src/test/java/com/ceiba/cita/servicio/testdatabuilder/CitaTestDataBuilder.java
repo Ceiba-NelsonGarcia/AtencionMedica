@@ -1,7 +1,6 @@
 package com.ceiba.cita.servicio.testdatabuilder;
 
 import com.ceiba.cita.modelo.entidad.Cita;
-
 import java.time.LocalDate;
 
 public class CitaTestDataBuilder {
@@ -20,7 +19,7 @@ public class CitaTestDataBuilder {
         idCita = 1L;
         idUsuario = 2L;
         idDoctor = 3L;
-        fechaCita = LocalDate.parse("2202-03-24");
+        fechaCita = LocalDate.parse("2022-03-24");
         horaInicial = 8;
         horaFinal = 9;
         valorUsd = 10D;

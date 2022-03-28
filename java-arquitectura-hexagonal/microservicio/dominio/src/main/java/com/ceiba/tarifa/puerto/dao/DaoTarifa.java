@@ -11,4 +11,11 @@ public interface DaoTarifa {
      * */
 
     List<DtoTarifa> listarTarifa();
+
+    /**
+     * Permite para devolver los datos de un doctor en especifico
+     * @return los doctores
+     */
+    List<DtoTarifa> listarTarifaPorId(Long idTarifa);
+
 }

@@ -11,4 +11,11 @@ public interface DaoHorario {
      * */
 
     List<DtoHorario> listarHorario();
+
+    /**
+     * Permite listar un solo horario por idHorario
+     * @return El horario especifico del Doctor 1 Regular o el resto Hextra
+     * */
+
+    List<DtoHorario> listarHorarioPorId(Long idHorario);
 }

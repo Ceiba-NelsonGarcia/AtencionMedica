@@ -39,5 +39,14 @@ public class Cita {
         this.horaFinal = horaFinal;
         this.valorUsd = valorUsd;
         this.valorCop = valorCop;
+
+    }
+
+    public void setValorUsd(Double valorUsd) {
+        this.valorUsd = valorUsd;
+    }
+
+    public void setValorCop(Double valorCop) {
+        this.valorCop = valorCop;
     }
 }
