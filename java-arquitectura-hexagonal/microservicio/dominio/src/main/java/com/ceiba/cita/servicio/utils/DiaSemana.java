@@ -7,7 +7,7 @@ import java.time.LocalDate;
  * Devuelve el número de día de la semana para determinar si es no habil 6 Sabado o 7 Domingo
  * */
 
-public class DiaSemana {
+public final class DiaSemana {
 
     private DiaSemana(){}
 

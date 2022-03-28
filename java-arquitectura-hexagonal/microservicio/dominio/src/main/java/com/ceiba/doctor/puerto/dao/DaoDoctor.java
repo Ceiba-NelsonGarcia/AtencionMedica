@@ -15,5 +15,5 @@ public interface DaoDoctor {
      * Permite para devolver los datos de un doctor en especifico
      * @return los doctores
      */
-    List<DtoDoctor> listarDoctorPorId(Long IdDoctor);
+    List<DtoDoctor> listarDoctorPorId(Long idDoctor);
 }

@@ -33,7 +33,7 @@ public class ValorCitaUSD {
         Long porcentajeTarifaHora;
         long porcentajeTotalAdicional;
         double valorHorarioAdicional;
-        double valorCitaUSD;
+        double denominador = 100D;
 
         TarifaDiaSemana tarifaDiaSemana = new TarifaDiaSemana();
         TarifaHorarioDoctor tarifaHorarioDoctor = new TarifaHorarioDoctor();
@@ -42,7 +42,7 @@ public class ValorCitaUSD {
          * Se extrae los datos del doctor con el cual se esta creando la cita
          * @param cita.getIdDoctor
          */
-        List<DtoDoctor> dtoDoctor = daoDoctor.listarDoctorPorId(cita.getIdDoctor());
+        List<DtoDoctor> dtoDoctor = this.daoDoctor.listarDoctorPorId(cita.getIdDoctor());
         if (dtoDoctor == null) {
             throw new ExcepcionSinDatos(EL_DOCTOR_NO_SE_ENCUENTRA_EN_LA_BASE_DE_DATOS);
         }
@@ -51,7 +51,7 @@ public class ValorCitaUSD {
          * Se extrae los datos de la tarifa del doctor 1 General o 2 Especialista
          * @param dtoDoctor.get(0).getIdTarifa()
          */
-        List<DtoTarifa> dtoTarifa = daoTarifa.listarTarifaPorId(dtoDoctor.get(0).getIdTarifa());
+        List<DtoTarifa> dtoTarifa = this.daoTarifa.listarTarifaPorId(dtoDoctor.get(0).getIdTarifa());
         if (dtoTarifa == null) {
             throw new ExcepcionSinDatos(LA_TARIFA_DEL_DOCTOR_NO_SE_ENCUENTRA_EN_LA_BASE_DE_DATOS);
         }
@@ -63,7 +63,7 @@ public class ValorCitaUSD {
          * Se extrae los datos de la tarifa si la cita es en un dia habil o no.
          * @param idTarifaDia
          */
-        List<DtoTarifa> dtoTarifaDia = daoTarifa.listarTarifaPorId(idTarifaDia);
+        List<DtoTarifa> dtoTarifaDia = this.daoTarifa.listarTarifaPorId(idTarifaDia);
         if (dtoTarifaDia == null) {
             throw new ExcepcionSinDatos(LA_TARIFA_DE_DIAS_NO_HABILES_O_HABILES_NO_SE_ENCUENTRA_EN_LA_BASE_DE_DATOS);
         }
@@ -75,16 +75,15 @@ public class ValorCitaUSD {
          * Se extrae los datos de la tarifa si la cita es en un dia habil o no.
          * @param idTarifaHorario
          */
-        List<DtoTarifa> dtoTarifaHorario = daoTarifa.listarTarifaPorId(idTarifaHorario);
+        List<DtoTarifa> dtoTarifaHorario = this.daoTarifa.listarTarifaPorId(idTarifaHorario);
         if (dtoTarifaHorario == null) {
             throw new ExcepcionSinDatos(LA_TARIFA_DEL_HORARIO_NO_SE_ENCUENTRA_EN_LA_BASE_DE_DATOS);
         }
 
         porcentajeTarifaHora = dtoTarifaHorario.get(0).getValorTarifa();
         porcentajeTotalAdicional = porcentajeTarifaHora + porcentajeTarifaDia;
-        valorHorarioAdicional = (valorDoctor * (porcentajeTotalAdicional / 100));
-        valorCitaUSD = valorDoctor + valorHorarioAdicional;
+        valorHorarioAdicional = (valorDoctor * (porcentajeTotalAdicional / denominador));
 
-        return valorCitaUSD;
+        return valorDoctor + valorHorarioAdicional;
     }
 }
