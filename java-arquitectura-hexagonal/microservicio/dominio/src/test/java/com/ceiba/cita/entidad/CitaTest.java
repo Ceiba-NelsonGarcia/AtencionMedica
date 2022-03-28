@@ -11,7 +11,7 @@ import java.time.LocalDate;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class CitaTest {
+class CitaTest {
 
     @Test
     @DisplayName("Deberia crear correctamente la Cita")
