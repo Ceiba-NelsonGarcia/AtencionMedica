@@ -20,7 +20,7 @@ public class ServicioCrearDoctor {
     }
 
     private void validarExistenciaPrevia(Doctor doctor) {
-        boolean existe = this.repositorioDoctor.existeDoctor(doctor.getNombreDoctor());
+        boolean existe = this.repositorioDoctor.existeDoctorPorId(doctor.getIdDoctor());
         if(existe) {
             throw new ExcepcionDuplicidad(EL_DOCTOR_YA_EXISTE_EN_EL_SISTEMA);
         }

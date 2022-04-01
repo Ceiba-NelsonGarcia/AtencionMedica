@@ -29,7 +29,7 @@ class ServicioCrearCitaTest {
         BasePrueba.assertThrows(() -> servicioCrearCita.ejecutar(cita), ExcepcionDuplicidad.class,"La cita ya existe en el sistema");
     }
 
-   /* @Test
+    @Test
     @DisplayName("Deberia Crear la cita de manera correcta")
     void deberiaCrearElCitaDeManeraCorrecta() {
         // arrange
@@ -47,5 +47,5 @@ class ServicioCrearCitaTest {
         //- assert
         assertEquals(10L,idCita);
         Mockito.verify(repositorioCita, Mockito.times(1)).crearCita(cita);
-    }*/
+    }
 }

@@ -45,14 +45,6 @@ public class RepositorioDoctorMysql implements RepositorioDoctor {
     }
 
     @Override
-    public boolean existeDoctor(String nombreDoctor) {
-        MapSqlParameterSource paramSource = new MapSqlParameterSource();
-        paramSource.addValue("nombreDoctor", nombreDoctor);
-
-        return Boolean.TRUE.equals(this.customNamedParameterJdbcTemplate.getNamedParameterJdbcTemplate().queryForObject(sqlExiste, paramSource, Boolean.class));
-    }
-
-    @Override
     public void actualizarDoctor(Doctor doctor) {
         this.customNamedParameterJdbcTemplate.actualizar(doctor, sqlActualizar);
     }

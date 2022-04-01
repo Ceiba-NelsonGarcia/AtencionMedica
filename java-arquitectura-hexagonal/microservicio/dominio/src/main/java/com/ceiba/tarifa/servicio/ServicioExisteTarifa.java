@@ -16,15 +16,17 @@ public class ServicioExisteTarifa {
     }
 
     //Metodo para entregar la tarifa que se va a signar al Doctor
-    public void entregarTarifa(Tarifa tarifa){
+    public boolean entregarTarifa(Tarifa tarifa){
         validarExistenciaPreviaTarifa(tarifa);
         this.repositorioTarifa.existeTarifaPorId(tarifa.getIdTarifa());
+        return true;
     }
 
-    public void validarExistenciaPreviaTarifa(Tarifa tarifa) {
+    public boolean validarExistenciaPreviaTarifa(Tarifa tarifa) {
         boolean existe = this.repositorioTarifa.existeTarifaPorId(tarifa.getIdTarifa());
         if (!existe ) {
             throw new ExcepcionDuplicidad(LA_TARIFA_NO_EXISTE_EN_EL_SISTEMA);
         }
+        return true;
     }
 }

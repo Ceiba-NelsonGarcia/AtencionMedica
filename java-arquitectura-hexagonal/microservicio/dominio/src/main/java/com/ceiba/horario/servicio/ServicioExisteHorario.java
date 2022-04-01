@@ -15,15 +15,17 @@ public class ServicioExisteHorario {
     }
 
     //Metodo para entregar el horario que se va a signar al Doctor
-    public void entregarHorario(Horario horario){
+    public boolean entregarHorario(Horario horario){
         validarExistenciaPreviaHorario(horario);
         this.repositorioHorario.existeHorarioPorId(horario.getIdHorario());
+        return true;
     }
 
-    public void validarExistenciaPreviaHorario(Horario horario) {
+    public boolean validarExistenciaPreviaHorario(Horario horario) {
         boolean existe = this.repositorioHorario.existeHorarioPorId(horario.getIdHorario());
         if (!existe ) {
             throw new ExcepcionDuplicidad(EL_HORARIO_NO_EXISTE_EN_EL_SISTEMA);
         }
+        return true;
     }
 }

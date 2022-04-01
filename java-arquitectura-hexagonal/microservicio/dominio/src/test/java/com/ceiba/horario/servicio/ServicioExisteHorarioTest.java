@@ -9,17 +9,61 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mockito;
 
-public class ServicioExisteHorarioTest {
+import static org.junit.jupiter.api.Assertions.*;
+
+class ServicioExisteHorarioTest {
+
+    @Test
+    @DisplayName("Deberia true, cuando se valide la no existencia del Horario")
+    void deberiaDevolverTrueCuandoSeValideLaExistenciaDelHorario() {
+        // arrange
+        Horario horario = new HorarioTestDataBuilder()
+                .conIdHorario(1L).conNombreHorario("Regular").conHoraInicial(8).conHoraFinal(9).buildHorario();
+        RepositorioHorario repositorioHorario = Mockito.mock(RepositorioHorario.class);
+        Mockito.when(repositorioHorario.existeHorarioPorId(Mockito.anyLong())).thenReturn(true);
+        ServicioExisteHorario servicioExisteHorario = new ServicioExisteHorario(repositorioHorario);
+        // act - assert
+        assertTrue(servicioExisteHorario.entregarHorario(horario));
+    }
 
     @Test
     @DisplayName("Deberia lanzar una exepcion cuando se valide la no existencia del Horario")
     void deberiaLanzarUnaExepcionCuandoSeValideLaExistenciaDelHorario() {
         // arrange
-        Horario horario = new HorarioTestDataBuilder().conIdHorario(1L).conNombreHorario("Regular").conHoraInicial(8).conHoraFinal(9).buildHorario();
+        Horario horario = new HorarioTestDataBuilder()
+                .conIdHorario(1L).conNombreHorario("Regular").conHoraInicial(8).conHoraFinal(9).buildHorario();
         RepositorioHorario repositorioHorario = Mockito.mock(RepositorioHorario.class);
         Mockito.when(repositorioHorario.existeHorarioPorId(Mockito.anyLong())).thenReturn(false);
         ServicioExisteHorario servicioExisteHorario = new ServicioExisteHorario(repositorioHorario);
         // act - assert
-        BasePrueba.assertThrows(() -> servicioExisteHorario.entregarHorario(horario), ExcepcionDuplicidad.class,"El Horario no existe en el sistema");
+        BasePrueba.assertThrows(() -> servicioExisteHorario.entregarHorario(horario),
+                ExcepcionDuplicidad.class,"El Horario no existe en el sistema");
+    }
+
+    @Test
+    @DisplayName("Deberia devolver true, cuando se valide la no existencia del Horario")
+    void deberiaDevolverTrueCuandoSeEjecutaValidarExistenciaPreviaHorario() {
+        // arrange
+        Horario horario = new HorarioTestDataBuilder()
+                .conIdHorario(1L).conNombreHorario("Regular").conHoraInicial(8).conHoraFinal(9).buildHorario();
+        RepositorioHorario repositorioHorario = Mockito.mock(RepositorioHorario.class);
+        Mockito.when(repositorioHorario.existeHorarioPorId(Mockito.anyLong())).thenReturn(true);
+        ServicioExisteHorario servicioExisteHorario = new ServicioExisteHorario(repositorioHorario);
+        // act - assert
+        assertTrue(servicioExisteHorario.validarExistenciaPreviaHorario(horario));
+    }
+
+    @Test
+    @DisplayName("Deberia lanzar una exepcion cuando se valide la no existencia del Horario")
+    void deberiaLanzarUnaExcepcionCuandoSeEjecutaValidarExistenciaPreviaHorario() {
+        // arrange
+        Horario horario = new HorarioTestDataBuilder()
+                .conIdHorario(1L).conNombreHorario("Regular").conHoraInicial(8).conHoraFinal(9).buildHorario();
+        RepositorioHorario repositorioHorario = Mockito.mock(RepositorioHorario.class);
+        Mockito.when(repositorioHorario.existeHorarioPorId(Mockito.anyLong())).thenReturn(false);
+        ServicioExisteHorario servicioExisteHorario = new ServicioExisteHorario(repositorioHorario);
+        // act - assert
+        BasePrueba.assertThrows(() -> servicioExisteHorario.validarExistenciaPreviaHorario(horario),
+                ExcepcionDuplicidad.class,"El Horario no existe en el sistema");
     }
 }

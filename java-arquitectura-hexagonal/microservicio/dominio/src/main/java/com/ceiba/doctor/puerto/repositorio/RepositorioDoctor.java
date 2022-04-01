@@ -24,13 +24,6 @@ public interface RepositorioDoctor {
     void eliminarDoctor(Long idDoctor);
 
     /**
-     * Permite validar si existe un Doctor con un nombre
-     * @param nombreDoctor
-     * @return si existe o no
-     */
-    boolean existeDoctor(String nombreDoctor);
-
-    /**
      * Permite validar si existe un Doctor con un nombre excluyendo un id
      * @return si existe o no
      */

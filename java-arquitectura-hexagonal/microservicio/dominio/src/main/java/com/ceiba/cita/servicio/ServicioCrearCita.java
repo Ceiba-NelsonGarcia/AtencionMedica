@@ -44,7 +44,7 @@ public class ServicioCrearCita {
     }
 
     private void validarExistenciaPrevia(Cita cita) {
-        boolean existe = this.repositorioCita.existe(cita.getIdCita());
+        boolean existe = this.repositorioCita.existeCitaPorId(cita.getIdCita());
         if(existe) {
             throw new ExcepcionDuplicidad(LA_CITA_YA_EXISTE_EN_EL_SISTEMA);
         }

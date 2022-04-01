@@ -24,13 +24,6 @@ public interface RepositorioCita {
     void eliminarCita(Long idCita);
 
     /**
-     * Permite validar si existe un cita con un id
-     * @param idCita
-     * @return si existe o no
-     */
-    boolean existe(Long idCita);
-
-    /**
      * Permite validar si existe un cita con un nombre excluyendo un id
      * @return si existe o no
      */
