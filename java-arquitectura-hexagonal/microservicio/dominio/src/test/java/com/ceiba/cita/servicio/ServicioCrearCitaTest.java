@@ -4,6 +4,7 @@ import com.ceiba.BasePrueba;
 import com.ceiba.cita.modelo.entidad.Cita;
 import com.ceiba.cita.puerto.repositorio.RepositorioCita;
 import com.ceiba.cita.servicio.testdatabuilder.CitaTestDataBuilder;
+import com.ceiba.cita.servicio.utils.ValorCitaUSD;
 import com.ceiba.doctor.puerto.dao.DaoDoctor;
 import com.ceiba.dominio.excepcion.ExcepcionDuplicidad;
 import com.ceiba.tarifa.puerto.dao.DaoTarifa;
@@ -28,7 +29,7 @@ class ServicioCrearCitaTest {
         BasePrueba.assertThrows(() -> servicioCrearCita.ejecutar(cita), ExcepcionDuplicidad.class,"La cita ya existe en el sistema");
     }
 
-/*    @Test
+   /* @Test
     @DisplayName("Deberia Crear la cita de manera correcta")
     void deberiaCrearElCitaDeManeraCorrecta() {
         // arrange
@@ -36,10 +37,12 @@ class ServicioCrearCitaTest {
         RepositorioCita repositorioCita = Mockito.mock(RepositorioCita.class);
         DaoDoctor daoDoctor = Mockito.mock(DaoDoctor.class);
         DaoTarifa daoTarifa = Mockito.mock(DaoTarifa.class);
+        ValorCitaUSD valorCitaUSD = Mockito.mock(ValorCitaUSD.class);
         Mockito.when(repositorioCita.existe(Mockito.anyLong())).thenReturn(false);
         Mockito.when(repositorioCita.crearCita(cita)).thenReturn(10L);
         ServicioCrearCita servicioCrearCita = new ServicioCrearCita(repositorioCita, daoDoctor, daoTarifa);
         // act
+        //cita.setValorCop(valorCitaUSD.obtenerValorCita(cita));
         Long idCita = servicioCrearCita.ejecutar(cita);
         //- assert
         assertEquals(10L,idCita);

@@ -7,14 +7,12 @@ import org.junit.jupiter.api.Test;
 import org.mockito.Mockito;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-class TarifaDoctorTest {
+class TarifaHorarioDoctorTest {
 
     @Test
     @DisplayName("Deberia devolver la tarifa del horario doctor si es Regular 0 Extra")
     void deberiaDevolverLaTarifaHorarioDelDoctorRegularExtra() {
         //arrange
-        Cita cita = new CitaTestDataBuilder().buildCita();
-        ValorCitaUSD valorCitaUSD = Mockito.mock(ValorCitaUSD.class);
         TarifaHorarioDoctor tarifaHorarioDoctor = Mockito.mock(TarifaHorarioDoctor.class);
         //act - assert
         assertEquals(0L, tarifaHorarioDoctor.obtenerTarifaHorarioDoctor(0L));

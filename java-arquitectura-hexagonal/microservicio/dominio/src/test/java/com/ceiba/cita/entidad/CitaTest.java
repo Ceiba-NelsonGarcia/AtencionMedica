@@ -22,7 +22,7 @@ class CitaTest {
         // act
         Cita cita = new CitaTestDataBuilder()
                         .conIdCita(1L).conIdUsuario(2L).conIdDoctor(3L).conFechaCita(fechaCita)
-                        .conHoraInicial(8).conHoraFinal(9).conValorUsd(10D).conValorCop(40000D)
+                        .conHoraInicial(8).conHoraFinal(9).conValorUsd(0D).conValorCop(0D)
                         .buildCita();
         // assert
         assertEquals(1L,cita.getIdCita());
@@ -31,8 +31,8 @@ class CitaTest {
         assertEquals(fechaCita,cita.getFechaCita());
         assertEquals(8,cita.getHoraInicial());
         assertEquals(9,cita.getHoraFinal());
-        assertEquals(10,cita.getValorUsd());
-        assertEquals(40000,cita.getValorCop());
+        assertEquals(0,cita.getValorUsd());
+        assertEquals(0,cita.getValorCop());
     }
 
     @Test

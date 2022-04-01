@@ -22,8 +22,8 @@ public class CitaTestDataBuilder {
         fechaCita = LocalDate.parse("2022-03-24");
         horaInicial = 8;
         horaFinal = 9;
-        valorUsd = 10D;
-        valorCop = 40000D;
+        valorUsd = 0D;
+        valorCop = 0D;
     }
 
     public CitaTestDataBuilder conIdCita(Long idCita) {

@@ -11,7 +11,7 @@ public final class DiaSemana {
 
     private DiaSemana(){}
 
-    public static int obtenerNumeroDiaSemana(@NotNull LocalDate fechaCita){
+    public static int obtenerNumeroDiaSemana(LocalDate fechaCita){
 
         return fechaCita.getDayOfWeek ().getValue ();
     }
