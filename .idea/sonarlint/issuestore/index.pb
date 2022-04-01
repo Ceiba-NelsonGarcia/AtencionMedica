@@ -269,5 +269,3 @@ xjava-arquitectura-hexagonal/microservicio/dominio/src/test/java/com/ceiba/usuar
 {java-arquitectura-hexagonal/microservicio/dominio/src/test/java/com/ceiba/usuario/servicio/ServicioEliminarUsuarioTest.java,7\0\707a54d084ca442c9b177eeb0b4beac20717b3c0
 £
 sjava-arquitectura-hexagonal/microservicio/dominio/src/test/java/com/ceiba/cita/servicio/utils/ValorCitaUSDTest.java,5\6\564d8d2f614993968099c47be260f0bacd33a3a3
-Ÿ
-ojava-arquitectura-hexagonal/microservicio/dominio/src/main/java/com/ceiba/cita/servicio/utils/ValorCitaUSD.java,e\1\e11602940e9030f363bdd0a6b8120eef6fb2a4ba

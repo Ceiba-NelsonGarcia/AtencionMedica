@@ -20,7 +20,7 @@ public class ValorCitaUSD {
     private DaoDoctor daoDoctor;
     private DaoTarifa daoTarifa;
 
-    List<DtoDoctor> dtoDoctor;
+    List<DtoDoctor> dtoDoctores;
 
     public ValorCitaUSD(DaoDoctor daoDoctor, DaoTarifa daoTarifa) {
         this.daoDoctor = daoDoctor;
@@ -38,7 +38,7 @@ public class ValorCitaUSD {
         Long idTarifaDiaSemana = tarifaDiaSemana.obtenerTarifaDiaSemana(cita);
         Long porcentajeTarifaDiaHabil = obtenerPorcentajeTarifaDiaHabil(idTarifaDiaSemana);
 
-        Long idTarifaHorario = tarifaHorarioDoctor.obtenerTarifaHorarioDoctor(dtoDoctor.get(0).getIdHorario());
+        Long idTarifaHorario = tarifaHorarioDoctor.obtenerTarifaHorarioDoctor(dtoDoctores.get(0).getIdHorario());
         Long porcentajeTarifaHora = obtenerporcentajeTarifaHora(idTarifaHorario);
 
         long porcentajeTotalAdicional = porcentajeTarifaHora + porcentajeTarifaDiaHabil;
@@ -49,37 +49,37 @@ public class ValorCitaUSD {
 
     // Metodos para extraccion de datos desde la base de datos
     protected Long obtenerIdTarifaDoctor(Cita cita) {
-        this.dtoDoctor = this.daoDoctor.listarDoctorPorId(cita.getIdDoctor());
-        if (dtoDoctor == null) {
+        this.dtoDoctores = this.daoDoctor.listarDoctorPorId(cita.getIdDoctor());
+        if (dtoDoctores == null) {
             throw new ExcepcionSinDatos(EL_DOCTOR_NO_SE_ENCUENTRA_EN_LA_BASE_DE_DATOS);
         }
-        return dtoDoctor.get(0).getIdTarifa();
+        return dtoDoctores.get(0).getIdTarifa();
     }
 
     protected Long obtenerValorTarifaDoctor(Long idTarifaDoctor){
-        List<DtoTarifa> dtoTarifaDoctor;
-        dtoTarifaDoctor = this.daoTarifa.listarTarifaPorId(idTarifaDoctor);
-        if (dtoTarifaDoctor == null) {
+        List<DtoTarifa> dtoTarifaDoctores;
+        dtoTarifaDoctores = this.daoTarifa.listarTarifaPorId(idTarifaDoctor);
+        if (dtoTarifaDoctores == null) {
             throw new ExcepcionSinDatos(LA_TARIFA_DEL_DOCTOR_NO_SE_ENCUENTRA_EN_LA_BASE_DE_DATOS);
         }
-        return dtoTarifaDoctor.get(0).getValorTarifa();
+        return dtoTarifaDoctores.get(0).getValorTarifa();
     }
 
     protected Long obtenerPorcentajeTarifaDiaHabil(Long idTarifaDiaSemana) {
-        List<DtoTarifa> dtoTarifaDiaHabil;
-        dtoTarifaDiaHabil = this.daoTarifa.listarTarifaPorId(idTarifaDiaSemana);
-        if (dtoTarifaDiaHabil == null) {
+        List<DtoTarifa> dtoTarifasDiasHabiles;
+        dtoTarifasDiasHabiles = this.daoTarifa.listarTarifaPorId(idTarifaDiaSemana);
+        if (dtoTarifasDiasHabiles == null) {
             throw new ExcepcionSinDatos(LA_TARIFA_DE_DIAS_NO_HABILES_O_HABILES_NO_SE_ENCUENTRA_EN_LA_BASE_DE_DATOS);
         }
-        return dtoTarifaDiaHabil.get(0).getValorTarifa();
+        return dtoTarifasDiasHabiles.get(0).getValorTarifa();
     }
 
     protected Long obtenerporcentajeTarifaHora(Long idTarifaHorario) {
-        List<DtoTarifa> dtoTarifaHorario;
-        dtoTarifaHorario = this.daoTarifa.listarTarifaPorId(idTarifaHorario);
-        if (dtoTarifaHorario == null) {
+        List<DtoTarifa> dtoTarifasHorario;
+        dtoTarifasHorario = this.daoTarifa.listarTarifaPorId(idTarifaHorario);
+        if (dtoTarifasHorario == null) {
             throw new ExcepcionSinDatos(LA_TARIFA_DEL_HORARIO_NO_SE_ENCUENTRA_EN_LA_BASE_DE_DATOS);
         }
-        return dtoTarifaHorario.get(0).getValorTarifa();
+        return dtoTarifasHorario.get(0).getValorTarifa();
     }
 }
