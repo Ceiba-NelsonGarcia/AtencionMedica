@@ -13,10 +13,19 @@ class TarifaHorarioDoctorTest {
     @DisplayName("Deberia devolver la tarifa del horario doctor si es Regular 0 Extra")
     void deberiaDevolverLaTarifaHorarioDelDoctorRegularExtra() {
         //arrange
-        TarifaHorarioDoctor tarifaHorarioDoctor = Mockito.mock(TarifaHorarioDoctor.class);
+        TarifaHorarioDoctor tarifaHorarioDoctor = new TarifaHorarioDoctor();
         //act - assert
-        assertEquals(0L, tarifaHorarioDoctor.obtenerTarifaHorarioDoctor(0L));
-        assertEquals(0L, tarifaHorarioDoctor.obtenerTarifaHorarioDoctor(1L));
-        assertEquals(0L, tarifaHorarioDoctor.obtenerTarifaHorarioDoctor(3L));
+        assertEquals(6L, tarifaHorarioDoctor.obtenerTarifaHorarioDoctor(0L));
+        assertEquals(5L, tarifaHorarioDoctor.obtenerTarifaHorarioDoctor(1L));
+        assertEquals(6L, tarifaHorarioDoctor.obtenerTarifaHorarioDoctor(3L));
+    }
+
+    @Test
+    @DisplayName("Deberia devolver la tarifa del horario doctor si es Regular 0 Extra")
+    void deberiaValidarLaTarifaDelDoctorDependiendoSiEsRegular() {
+        //arrange
+        TarifaHorarioDoctor tarifaHorarioDoctor = new TarifaHorarioDoctor();
+        //act - assert
+        assertEquals(5L, tarifaHorarioDoctor.validarHorarioRegular(1L,5L));
     }
 }

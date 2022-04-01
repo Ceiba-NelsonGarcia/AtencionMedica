@@ -11,16 +11,17 @@ public class TarifaDiaSemana {
 
     public Long obtenerTarifaDiaSemana(Cita cita){
 
-        int numeroDia;
-        long idTarifa = TARIFA_DIA_HABIL;
+        int numeroDia = DiaSemana.obtenerNumeroDiaSemana(cita.getFechaCita());
 
-        numeroDia = DiaSemana.obtenerNumeroDiaSemana(cita.getFechaCita());
+        return validarDiasNoHabiles(numeroDia, TARIFA_DIA_HABIL);
+    }
+
+    Long validarDiasNoHabiles(int numeroDia, long idTarifa){
 
         // Si el día es 5 Sabado o 6 Domingo el porcentaje de la tarifa es No habil
         if (numeroDia == SABADO || numeroDia == DOMINGO) {
             idTarifa = TARIFA_DIA_NO_HABIL;
         }
-
         return idTarifa;
     }
 }

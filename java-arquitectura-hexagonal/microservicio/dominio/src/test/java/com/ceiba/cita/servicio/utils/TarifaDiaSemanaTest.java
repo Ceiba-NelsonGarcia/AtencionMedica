@@ -6,7 +6,7 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class TarifaDiaSemanaTest {
+class TarifaDiaSemanaTest {
 
     @Test
     @DisplayName("Deberia devolver el IdTarifa de acuerdo al dia de la semana")
@@ -16,5 +16,15 @@ public class TarifaDiaSemanaTest {
         TarifaDiaSemana tarifaDiaSemana = new TarifaDiaSemana();
         // Act - Assert
         assertEquals(3, tarifaDiaSemana.obtenerTarifaDiaSemana(cita));
+    }
+
+    @Test
+    @DisplayName("Deberia devolver un valor idTarifa valido")
+    void deberiaDevolverUnValosValidoIdTarifaValido(){
+        // arrange
+        Cita cita = new CitaTestDataBuilder().buildCita();
+        TarifaDiaSemana tarifaDiaSemana = new TarifaDiaSemana();
+        // Act - Assert
+        assertEquals(3L, tarifaDiaSemana.validarDiasNoHabiles(7,3L));
     }
 }

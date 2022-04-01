@@ -20,11 +20,7 @@ public class ValorCitaUSD {
     private DaoDoctor daoDoctor;
     private DaoTarifa daoTarifa;
 
-    // Se cren las variables Dto qye gusrdan los datos de la base de datos
-    private List<DtoDoctor> dtoDoctor;
-    private List<DtoTarifa> dtoTarifaDoctor;
-    private List<DtoTarifa> dtoTarifaDiaHabil;
-    private List<DtoTarifa> dtoTarifaHorario;
+    List<DtoDoctor> dtoDoctor;
 
     public ValorCitaUSD(DaoDoctor daoDoctor, DaoTarifa daoTarifa) {
         this.daoDoctor = daoDoctor;
@@ -57,11 +53,12 @@ public class ValorCitaUSD {
         if (dtoDoctor == null) {
             throw new ExcepcionSinDatos(EL_DOCTOR_NO_SE_ENCUENTRA_EN_LA_BASE_DE_DATOS);
         }
-        return ((DtoDoctor)dtoDoctor.get(0)).getIdTarifa();
+        return dtoDoctor.get(0).getIdTarifa();
     }
 
     protected Long obtenerValorTarifaDoctor(Long idTarifaDoctor){
-        this.dtoTarifaDoctor = this.daoTarifa.listarTarifaPorId(idTarifaDoctor);
+        List<DtoTarifa> dtoTarifaDoctor;
+        dtoTarifaDoctor = this.daoTarifa.listarTarifaPorId(idTarifaDoctor);
         if (dtoTarifaDoctor == null) {
             throw new ExcepcionSinDatos(LA_TARIFA_DEL_DOCTOR_NO_SE_ENCUENTRA_EN_LA_BASE_DE_DATOS);
         }
@@ -69,7 +66,8 @@ public class ValorCitaUSD {
     }
 
     protected Long obtenerPorcentajeTarifaDiaHabil(Long idTarifaDiaSemana) {
-        this.dtoTarifaDiaHabil = this.daoTarifa.listarTarifaPorId(idTarifaDiaSemana);
+        List<DtoTarifa> dtoTarifaDiaHabil;
+        dtoTarifaDiaHabil = this.daoTarifa.listarTarifaPorId(idTarifaDiaSemana);
         if (dtoTarifaDiaHabil == null) {
             throw new ExcepcionSinDatos(LA_TARIFA_DE_DIAS_NO_HABILES_O_HABILES_NO_SE_ENCUENTRA_EN_LA_BASE_DE_DATOS);
         }
@@ -77,7 +75,8 @@ public class ValorCitaUSD {
     }
 
     protected Long obtenerporcentajeTarifaHora(Long idTarifaHorario) {
-        this.dtoTarifaHorario = this.daoTarifa.listarTarifaPorId(idTarifaHorario);
+        List<DtoTarifa> dtoTarifaHorario;
+        dtoTarifaHorario = this.daoTarifa.listarTarifaPorId(idTarifaHorario);
         if (dtoTarifaHorario == null) {
             throw new ExcepcionSinDatos(LA_TARIFA_DEL_HORARIO_NO_SE_ENCUENTRA_EN_LA_BASE_DE_DATOS);
         }
