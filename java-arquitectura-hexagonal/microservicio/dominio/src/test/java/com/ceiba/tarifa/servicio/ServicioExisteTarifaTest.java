@@ -19,7 +19,7 @@ class ServicioExisteTarifaTest {
         Tarifa tarifa = new TarifaTestDataBuilder()
                 .conIdTarifa(1L).conNombreTarifa("Regular").conValorTarifa(50L).buildTarifa();
         RepositorioTarifa repositorioTarifa = Mockito.mock(RepositorioTarifa.class);
-        Mockito.when(repositorioTarifa.existeTarifaPorId(Mockito.anyLong())).thenReturn(true);
+        Mockito.when(repositorioTarifa.existeTarifaPorId(Mockito.any())).thenReturn(true);
         ServicioExisteTarifa servicioExisteTarifa = new ServicioExisteTarifa(repositorioTarifa);
         // act - assert
         assertTrue(servicioExisteTarifa.entregarTarifa(tarifa));
@@ -32,7 +32,7 @@ class ServicioExisteTarifaTest {
         Tarifa tarifa = new TarifaTestDataBuilder()
                 .conIdTarifa(1L).conNombreTarifa("Regular").conValorTarifa(50L).buildTarifa();
         RepositorioTarifa repositorioTarifa = Mockito.mock(RepositorioTarifa.class);
-        Mockito.when(repositorioTarifa.existeTarifaPorId(Mockito.anyLong())).thenReturn(false);
+        Mockito.when(repositorioTarifa.existeTarifaPorId(Mockito.any())).thenReturn(false);
         ServicioExisteTarifa servicioExisteTarifa = new ServicioExisteTarifa(repositorioTarifa);
         // act - assert
         BasePrueba.assertThrows(() -> servicioExisteTarifa.entregarTarifa(tarifa),
@@ -46,7 +46,7 @@ class ServicioExisteTarifaTest {
         Tarifa tarifa = new TarifaTestDataBuilder()
                 .conIdTarifa(1L).conNombreTarifa("Regular").conValorTarifa(50L).buildTarifa();
         RepositorioTarifa repositorioTarifa = Mockito.mock(RepositorioTarifa.class);
-        Mockito.when(repositorioTarifa.existeTarifaPorId(Mockito.anyLong())).thenReturn(true);
+        Mockito.when(repositorioTarifa.existeTarifaPorId(Mockito.any())).thenReturn(true);
         ServicioExisteTarifa servicioExisteTarifa = new ServicioExisteTarifa(repositorioTarifa);
         // act - assert
         assertTrue(servicioExisteTarifa.validarExistenciaPreviaTarifa(tarifa));
@@ -59,7 +59,7 @@ class ServicioExisteTarifaTest {
         Tarifa tarifa = new TarifaTestDataBuilder()
                 .conIdTarifa(1L).conNombreTarifa("Regular").conValorTarifa(50L).buildTarifa();
         RepositorioTarifa repositorioTarifa = Mockito.mock(RepositorioTarifa.class);
-        Mockito.when(repositorioTarifa.existeTarifaPorId(Mockito.anyLong())).thenReturn(false);
+        Mockito.when(repositorioTarifa.existeTarifaPorId(Mockito.any())).thenReturn(false);
         ServicioExisteTarifa servicioExisteTarifa = new ServicioExisteTarifa(repositorioTarifa);
         // act - assert
         BasePrueba.assertThrows(() -> servicioExisteTarifa.entregarTarifa(tarifa),

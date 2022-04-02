@@ -20,7 +20,7 @@ class ServicioExisteHorarioTest {
         Horario horario = new HorarioTestDataBuilder()
                 .conIdHorario(1L).conNombreHorario("Regular").conHoraInicial(8).conHoraFinal(9).buildHorario();
         RepositorioHorario repositorioHorario = Mockito.mock(RepositorioHorario.class);
-        Mockito.when(repositorioHorario.existeHorarioPorId(Mockito.anyLong())).thenReturn(true);
+        Mockito.when(repositorioHorario.existeHorarioPorId(Mockito.any())).thenReturn(true);
         ServicioExisteHorario servicioExisteHorario = new ServicioExisteHorario(repositorioHorario);
         // act - assert
         assertTrue(servicioExisteHorario.entregarHorario(horario));
@@ -33,7 +33,7 @@ class ServicioExisteHorarioTest {
         Horario horario = new HorarioTestDataBuilder()
                 .conIdHorario(1L).conNombreHorario("Regular").conHoraInicial(8).conHoraFinal(9).buildHorario();
         RepositorioHorario repositorioHorario = Mockito.mock(RepositorioHorario.class);
-        Mockito.when(repositorioHorario.existeHorarioPorId(Mockito.anyLong())).thenReturn(false);
+        Mockito.when(repositorioHorario.existeHorarioPorId(Mockito.any())).thenReturn(false);
         ServicioExisteHorario servicioExisteHorario = new ServicioExisteHorario(repositorioHorario);
         // act - assert
         BasePrueba.assertThrows(() -> servicioExisteHorario.entregarHorario(horario),
@@ -47,7 +47,7 @@ class ServicioExisteHorarioTest {
         Horario horario = new HorarioTestDataBuilder()
                 .conIdHorario(1L).conNombreHorario("Regular").conHoraInicial(8).conHoraFinal(9).buildHorario();
         RepositorioHorario repositorioHorario = Mockito.mock(RepositorioHorario.class);
-        Mockito.when(repositorioHorario.existeHorarioPorId(Mockito.anyLong())).thenReturn(true);
+        Mockito.when(repositorioHorario.existeHorarioPorId(Mockito.any())).thenReturn(true);
         ServicioExisteHorario servicioExisteHorario = new ServicioExisteHorario(repositorioHorario);
         // act - assert
         assertTrue(servicioExisteHorario.validarExistenciaPreviaHorario(horario));
@@ -60,7 +60,7 @@ class ServicioExisteHorarioTest {
         Horario horario = new HorarioTestDataBuilder()
                 .conIdHorario(1L).conNombreHorario("Regular").conHoraInicial(8).conHoraFinal(9).buildHorario();
         RepositorioHorario repositorioHorario = Mockito.mock(RepositorioHorario.class);
-        Mockito.when(repositorioHorario.existeHorarioPorId(Mockito.anyLong())).thenReturn(false);
+        Mockito.when(repositorioHorario.existeHorarioPorId(Mockito.any())).thenReturn(false);
         ServicioExisteHorario servicioExisteHorario = new ServicioExisteHorario(repositorioHorario);
         // act - assert
         BasePrueba.assertThrows(() -> servicioExisteHorario.validarExistenciaPreviaHorario(horario),
