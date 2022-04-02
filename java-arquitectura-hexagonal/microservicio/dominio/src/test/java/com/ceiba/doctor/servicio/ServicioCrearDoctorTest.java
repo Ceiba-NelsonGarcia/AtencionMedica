@@ -19,7 +19,7 @@ class ServicioCrearDoctorTest {
         // arrange
         Doctor doctor = new DoctorTestDataBuilder().builDoctor();
         RepositorioDoctor repositorioDoctor = Mockito.mock(RepositorioDoctor.class);
-        Mockito.when(repositorioDoctor.existeDoctor(Mockito.anyString())).thenReturn(true);
+        Mockito.when(repositorioDoctor.existeDoctorPorId(Mockito.anyLong())).thenReturn(true);
         ServicioCrearDoctor servicioCrearDoctor = new ServicioCrearDoctor(repositorioDoctor);
         // act - assert
         BasePrueba.assertThrows(() -> servicioCrearDoctor.ejecutar(doctor), ExcepcionDuplicidad.class,"El doctor ya existe en el sistema");
@@ -31,7 +31,7 @@ class ServicioCrearDoctorTest {
         // arrange
         Doctor doctor = new DoctorTestDataBuilder().builDoctor();
         RepositorioDoctor repositorioDoctor = Mockito.mock(RepositorioDoctor.class);
-        Mockito.when(repositorioDoctor.existeDoctor(Mockito.anyString())).thenReturn(false);
+        Mockito.when(repositorioDoctor.existeDoctorPorId(Mockito.anyLong())).thenReturn(false);
         Mockito.when(repositorioDoctor.crearDoctor(doctor)).thenReturn(10L);
         ServicioCrearDoctor servicioCrearDoctor = new ServicioCrearDoctor(repositorioDoctor);
         // act

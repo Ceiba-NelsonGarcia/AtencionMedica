@@ -17,8 +17,6 @@ yjava-arquitectura-hexagonal/comun/comun-infraestructura/src/main/java/com/ceiba
 vjava-arquitectura-hexagonal/comun/comun-infraestructura/src/main/java/com/ceiba/infraestructura/jdbc/MapperResult.java,f\b\fbee830d8d37ba21b9ca6a5c65e790fcaba86f0a
 £
 sjava-arquitectura-hexagonal/comun/comun-infraestructura/src/main/java/com/ceiba/infraestructura/actuator/Salud.java,a\0\a0fb975e5eb8dbf63978fe9cd49848c67bc4a9b7
-‰
-Yjava-arquitectura-hexagonal/comun/comun-test/src/main/java/com/ceiba/core/BasePrueba.java,9\3\9320148b1e24151e449d234ed0e39f98dad4794a
 o
 ?java-arquitectura-hexagonal/comun/comun-aplicacion/build.gradle,d\a\da139ec0d05fcac88b96961d12ff01c095ae9069
 š
@@ -91,10 +89,6 @@ djava-arquitectura-hexagonal/microservicio/infraestructura/out/production/resour
 ajava-arquitectura-hexagonal/microservicio/infraestructura/out/production/resources/cita/crear.sql,5\4\541a7f581fa1175cc684a59e4a92cfaf68769ede
 £
 sjava-arquitectura-hexagonal/microservicio/dominio/src/main/java/com/ceiba/cita/servicio/ServicioActualizarCita.java,4\4\442c31d7521dfd71251fa2b44e421a910b469ce0
-·
-†java-arquitectura-hexagonal/microservicio/dominio/src/test/java/com/ceiba/usuario/servicio/testdatabuilder/UsuarioTestDataBuilder.java,f\d\fd40c379ae9c3f00018b195d07a543835d3d03f7
-‰
-Yjava-arquitectura-hexagonal/microservicio/dominio/src/test/java/com/ceiba/BasePrueba.java,e\c\ec5c68cc3ca45346caf63e46c9b17e9be824224a
 ·
 †java-arquitectura-hexagonal/microservicio/dominio/src/test/java/com/ceiba/horario/servicio/testdatabuilder/HorarioTestDataBuilder.java,8\f\8fca94087e9104b9c7c91c80c611d56941d3fc7b
 µ
@@ -197,8 +191,6 @@ Fjava-arquitectura-hexagonal/microservicio/infraestructura/build.gradle,b\9\b97
 €java-arquitectura-hexagonal/microservicio/dominio/src/test/java/com/ceiba/cita/servicio/testdatabuilder/CitaTestDataBuilder.java,9\5\951e803a91f218dc660335ecb4d0ef8cb7c7806d
 –
 fjava-arquitectura-hexagonal/microservicio/infraestructura/src/test/java/com/ceiba/ApplicationMock.java,0\4\040584bd4df99a10856e177ccfef3262692e596a
-Æ
-•java-arquitectura-hexagonal/microservicio/infraestructura/src/test/java/com/ceiba/usuario/servicio/testdatabuilder/ComandoUsuarioTestDataBuilder.java,1\8\18b5cfc55c35b01fc3822b480a4d4c7b22f4e69e
 ”
 djava-arquitectura-hexagonal/microservicio/dominio/src/test/java/com/ceiba/cita/entidad/CitaTest.java,a\7\a74719179fb475c8af30e805779759b543570a1e
 §
@@ -213,16 +205,12 @@ ujava-arquitectura-hexagonal/microservicio/dominio/src/test/java/com/ceiba/cita/
 ‹java-arquitectura-hexagonal/microservicio/dominio/src/test/java/com/ceiba/doctor/servicio/testdatabuilder/ServicioActualizarDoctorTest.java,d\b\dbedb5d7887e3db168acbc46324cda1f87482494
 º
 ‰java-arquitectura-hexagonal/microservicio/dominio/src/test/java/com/ceiba/doctor/servicio/testdatabuilder/ServicioEliminarDoctorTest.java,6\2\62327c38beb6ccf6170d8a1bd0976093ad629311
-¦
-vjava-arquitectura-hexagonal/microservicio/dominio/src/test/java/com/ceiba/doctor/servicio/ServicioCrearDoctorTest.java,b\2\b234e0ea58df4d845c1b82503677d0b96746dbcd
 š
 jjava-arquitectura-hexagonal/microservicio/dominio/src/test/java/com/ceiba/horario/entidad/HorarioTest.java,b\0\b06c712b3a467493d49c7a313c84db1b0734f1bd
 ˜
 hjava-arquitectura-hexagonal/microservicio/dominio/src/test/java/com/ceiba/tarifa/entidad/TarifaTest.java,d\2\d20ffc852347725f7d97b42feaeade563cc26e71
 š
 jjava-arquitectura-hexagonal/microservicio/dominio/src/test/java/com/ceiba/usuario/entidad/UsuarioTest.java,7\c\7cc9e5bb268b0f05d002a451ea65779f76dc184c
-¨
-xjava-arquitectura-hexagonal/microservicio/dominio/src/test/java/com/ceiba/usuario/servicio/ServicioCrearUsuarioTest.java,5\f\5f54c79b623f00a4f3514575f849a7fc0f9e0412
 «
 {java-arquitectura-hexagonal/microservicio/dominio/src/test/java/com/ceiba/usuario/servicio/ServicioEliminarUsuarioTest.java,7\0\707a54d084ca442c9b177eeb0b4beac20717b3c0
 £
