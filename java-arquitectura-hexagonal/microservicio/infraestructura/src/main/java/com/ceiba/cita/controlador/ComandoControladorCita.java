@@ -11,7 +11,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping("/cita")
+@RequestMapping("/citas")
 @Api(tags = { "Controlador comando cita"})
 public class ComandoControladorCita {
 

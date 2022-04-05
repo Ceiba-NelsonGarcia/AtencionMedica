@@ -1,12 +1,13 @@
-package com.ceiba.usuario.controlador;
+package com.ceiba.cita.controlador;
 
 import static org.hamcrest.Matchers.hasSize;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
 
 import com.ceiba.ApplicationMock;
-import com.ceiba.usuario.comando.ComandoUsuario;
-import com.ceiba.usuario.servicio.testdatabuilder.ComandoUsuarioTestDataBuilder;
+import com.ceiba.cita.comando.ComandoCita;
+import com.ceiba.cita.servicio.testbuilder.ComandoCitaTestDataBuilder;
+import com.ceiba.usuario.controlador.ComandoControladorUsuario;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -23,7 +24,7 @@ import org.springframework.test.web.servlet.MockMvc;
 @WebMvcTest(ComandoControladorUsuario.class)
 @ContextConfiguration(classes= ApplicationMock.class)
 @DirtiesContext(classMode = DirtiesContext.ClassMode.AFTER_EACH_TEST_METHOD)
-class ComandoControladorUsuarioTest {
+public class ComandoControladorCitaTest {
 
     @Autowired
     private ObjectMapper objectMapper;
@@ -31,45 +32,45 @@ class ComandoControladorUsuarioTest {
     @Autowired
     private MockMvc mocMvc;
 
-   @Test
-    @DisplayName("Deberia crear un usuario")
-    void deberiaCrearUnUsuario() throws Exception{
+    @Test
+    @DisplayName("Deberia crear un cita")
+    void deberiaCrearUnCita() throws Exception{
         // arrange
-        ComandoUsuario usuario = new ComandoUsuarioTestDataBuilder().build();
+        ComandoCita cita = new ComandoCitaTestDataBuilder().build();
         // act - assert
-        mocMvc.perform(post("/usuarios/crear")
-                .contentType(MediaType.APPLICATION_JSON)
-                .content(objectMapper.writeValueAsString(usuario)))
+        mocMvc.perform(post("/citas/crear")
+                        .contentType(MediaType.APPLICATION_JSON)
+                        .content(objectMapper.writeValueAsString(cita)))
                 .andExpect(status().isOk())
                 .andExpect(content().json("{'valor': 2}"));
     }
 
     @Test
-    @DisplayName("Deberia actualizar un usuario")
-    void deberiaActualizarUnUsuario() throws Exception{
+    @DisplayName("Deberia actualizar un cita")
+    void deberiaActualizarUnCita() throws Exception{
         // arrange
         Long id = 1L;
-        ComandoUsuario usuario = new ComandoUsuarioTestDataBuilder().build();
+        ComandoCita cita = new ComandoCitaTestDataBuilder().build();
         // act - assert
-        mocMvc.perform(put("/usuarios/{id}",id)
-                .contentType(MediaType.APPLICATION_JSON)
-                .content(objectMapper.writeValueAsString(usuario)))
+        mocMvc.perform(put("/citas/{id}",id)
+                        .contentType(MediaType.APPLICATION_JSON)
+                        .content(objectMapper.writeValueAsString(cita)))
                 .andExpect(status().isOk());
     }
 
     @Test
-    @DisplayName("Deberia eliminar un usuario")
-    void deberiaEliminarUnUsuario() throws Exception {
+    @DisplayName("Deberia eliminar un cita")
+    void deberiaEliminarUnCita() throws Exception {
         // arrange
         Long id = 1L;
         // act - assert
-        mocMvc.perform(delete("/usuarios/{id}",id)
-                .contentType(MediaType.APPLICATION_JSON)
-                .accept(MediaType.APPLICATION_JSON))
+        mocMvc.perform(delete("/citas/{id}",id)
+                        .contentType(MediaType.APPLICATION_JSON)
+                        .accept(MediaType.APPLICATION_JSON))
                 .andExpect(status().isOk());
 
-        mocMvc.perform(get("/usuarios")
-                .contentType(MediaType.APPLICATION_JSON))
+        mocMvc.perform(get("/citas")
+                        .contentType(MediaType.APPLICATION_JSON))
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$", hasSize(0)));
     }

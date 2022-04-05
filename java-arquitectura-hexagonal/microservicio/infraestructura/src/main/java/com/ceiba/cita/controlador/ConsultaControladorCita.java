@@ -11,8 +11,8 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.List;
 
 @RestController
-@RequestMapping("/cita")
-@Api(tags={"Controlador consulta cita"})
+@RequestMapping("/citas")
+@Api(tags={"Controlador consulta citas"})
 public class ConsultaControladorCita {
 
     private final ManejadorListarCita manejadorListarCita;

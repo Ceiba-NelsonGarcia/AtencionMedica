@@ -1,4 +1,4 @@
-package com.ceiba.usuario.controlador;
+package com.ceiba.cita.controlador;
 
 import static org.hamcrest.Matchers.hasSize;
 import static org.hamcrest.core.Is.is;
@@ -7,6 +7,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
 import com.ceiba.ApplicationMock;
+import com.ceiba.usuario.controlador.ConsultaControladorUsuario;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -22,21 +23,20 @@ import org.springframework.test.web.servlet.MockMvc;
 @WebMvcTest(ConsultaControladorUsuario.class)
 @ContextConfiguration(classes= ApplicationMock.class)
 @DirtiesContext(classMode = DirtiesContext.ClassMode.AFTER_EACH_TEST_METHOD)
-class ConsultaControladorUsuarioTest {
+class ConsultaControladorCitaTest {
 
     @Autowired
     private MockMvc mocMvc;
 
     @Test
-    @DisplayName("Deberia listar usuarios")
-    void deberiaListarUsuarios() throws Exception {
+    @DisplayName("Deberia listar cita")
+    void deberiaListarCita() throws Exception {
         // arrange
         // act - assert
-        mocMvc.perform(get("/usuarios")
-                .contentType(MediaType.APPLICATION_JSON))
+        mocMvc.perform(get("/cita")
+                        .contentType(MediaType.APPLICATION_JSON))
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$", hasSize(1)))
-                .andExpect(jsonPath("$[0].nombreUsuario", is("test")))
-                .andExpect(jsonPath("$[0].idUsuario", is(1)));
+                .andExpect(jsonPath("$[0].idCita", is(2)));
     }
 }
