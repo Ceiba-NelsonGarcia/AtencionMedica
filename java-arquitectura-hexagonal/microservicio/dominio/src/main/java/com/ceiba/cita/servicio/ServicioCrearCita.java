@@ -29,24 +29,32 @@ public class ServicioCrearCita {
 
     public Long ejecutar(Cita cita) {
 
-        ValorCitaUSD valorCitaUSD = new ValorCitaUSD(daoDoctor, daoTarifa);
-        ConvertirUSDaCOP convertirUSDaCOP = new ConvertirUSDaCOP();
-        Double valorCita;
-
         validarExistenciaPrevia(cita);
 
         //Calcula el valor de la cita en USD
-        valorCita = valorCitaUSD.obtenerValorCita(cita);
+        Double valorCita = obtenerValorCitaUSD(cita);
         cita.setValorUsd(valorCita);
-        cita.setValorCop(convertirUSDaCOP.obtenerValorCOP(valorCita));
+        cita.setValorCop(obtenerValorCitaCOP(valorCita));
 
         return this.repositorioCita.crearCita(cita);
     }
 
-    private void validarExistenciaPrevia(Cita cita) {
+    boolean validarExistenciaPrevia(Cita cita) {
         boolean existe = this.repositorioCita.existeCitaPorId(cita.getIdCita());
         if(existe) {
             throw new ExcepcionDuplicidad(LA_CITA_YA_EXISTE_EN_EL_SISTEMA);
         }
+        return existe;
     }
+
+    Double obtenerValorCitaUSD(Cita cita){
+        ValorCitaUSD valorCitaUSD = new ValorCitaUSD(daoDoctor, daoTarifa);
+        return valorCitaUSD.obtenerValorCita(cita);
+    }
+
+    Double obtenerValorCitaCOP(Double valorCita){
+        ConvertirUSDaCOP convertirUSDaCOP = new ConvertirUSDaCOP();
+        return convertirUSDaCOP.obtenerValorCOP(valorCita);
+    }
+
 }

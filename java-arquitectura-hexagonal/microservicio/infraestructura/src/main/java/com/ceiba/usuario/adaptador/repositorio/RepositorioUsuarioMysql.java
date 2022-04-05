@@ -10,22 +10,24 @@ import org.springframework.stereotype.Repository;
 @Repository
 class RepositorioUsuarioMysql implements RepositorioUsuario {
 
+    private static final String ID_USUARIO = "idUsuario";
+    private static final String USUARIO = "usuario";
     private final CustomNamedParameterJdbcTemplate customNamedParameterJdbcTemplate;
 
-    @SqlStatement(namespace="usuario", value="crear")
-    private static String sqlCrear;
+    @SqlStatement(namespace=USUARIO, value="crear")
+    private String sqlCrear;
 
-    @SqlStatement(namespace="usuario", value="actualizar")
-    private static String sqlActualizar;
+    @SqlStatement(namespace=USUARIO, value="actualizar")
+    private String sqlActualizar;
 
-    @SqlStatement(namespace="usuario", value="eliminar")
-    private static String sqlEliminar;
+    @SqlStatement(namespace=USUARIO, value="eliminar")
+    private String sqlEliminar;
 
-    @SqlStatement(namespace="usuario", value="existe")
-    private static String sqlExiste;
+    @SqlStatement(namespace=USUARIO, value="existe")
+    private String sqlExiste;
 
-    @SqlStatement(namespace="usuario", value="existePorId")
-    private static String sqlExistePorId;
+    @SqlStatement(namespace=USUARIO, value="existePorId")
+    private String sqlExistePorId;
 
     public RepositorioUsuarioMysql(CustomNamedParameterJdbcTemplate customNamedParameterJdbcTemplate) {
         this.customNamedParameterJdbcTemplate = customNamedParameterJdbcTemplate;
@@ -39,7 +41,7 @@ class RepositorioUsuarioMysql implements RepositorioUsuario {
     @Override
     public void eliminar(Long idUsuario) {
         MapSqlParameterSource paramSource = new MapSqlParameterSource();
-        paramSource.addValue("idUsuario", idUsuario);
+        paramSource.addValue(ID_USUARIO, idUsuario);
 
         this.customNamedParameterJdbcTemplate.getNamedParameterJdbcTemplate().update(sqlEliminar, paramSource);
     }
@@ -52,7 +54,7 @@ class RepositorioUsuarioMysql implements RepositorioUsuario {
     @Override
     public boolean existePorId(Long idUsuario) {
         MapSqlParameterSource paramSource = new MapSqlParameterSource();
-        paramSource.addValue("idUsuario", idUsuario);
+        paramSource.addValue(ID_USUARIO, idUsuario);
 
         return Boolean.TRUE.equals(this.customNamedParameterJdbcTemplate.getNamedParameterJdbcTemplate().queryForObject(sqlExistePorId, paramSource, Boolean.class));
     }
