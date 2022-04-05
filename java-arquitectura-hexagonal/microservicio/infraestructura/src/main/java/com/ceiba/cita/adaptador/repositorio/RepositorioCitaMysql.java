@@ -11,22 +11,23 @@ import org.springframework.stereotype.Repository;
 public class RepositorioCitaMysql implements RepositorioCita {
 
     private static final String ID_CITA = "idCita";
+    private static final String CITA = "cita";
     private final CustomNamedParameterJdbcTemplate customNamedParameterJdbcTemplate;
 
-    @SqlStatement(namespace="cita", value="crear")
-    private static String sqlCrear;
+    @SqlStatement(namespace= CITA, value="crear")
+    private String sqlCrear;
 
-    @SqlStatement(namespace="cita", value="actualizar")
-    private static String sqlActualizar;
+    @SqlStatement(namespace= CITA, value="actualizar")
+    private String sqlActualizar;
 
-    @SqlStatement(namespace="cita", value="eliminar")
-    private static String sqlEliminar;
+    @SqlStatement(namespace= CITA, value="eliminar")
+    private String sqlEliminar;
 
-    @SqlStatement(namespace="cita", value="existe")
-    private static String sqlExiste;
+    @SqlStatement(namespace= CITA, value="existe")
+    private String sqlExiste;
 
-    @SqlStatement(namespace="cita", value="existePorId")
-    private static String sqlExistePorId;
+    @SqlStatement(namespace= CITA, value="existePorId")
+    private String sqlExistePorId;
 
     public RepositorioCitaMysql(CustomNamedParameterJdbcTemplate customNamedParameterJdbcTemplate) {
         this.customNamedParameterJdbcTemplate = customNamedParameterJdbcTemplate;

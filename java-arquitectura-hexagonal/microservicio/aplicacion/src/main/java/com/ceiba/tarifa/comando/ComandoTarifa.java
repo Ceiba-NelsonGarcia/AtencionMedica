@@ -1,8 +1,11 @@
 package com.ceiba.tarifa.comando;
 
-import lombok.Data;
+import lombok.*;
 
-@Data
+@Getter
+@Setter
+@AllArgsConstructor
+@NoArgsConstructor
 public class ComandoTarifa {
 
     private Long idTarifa;

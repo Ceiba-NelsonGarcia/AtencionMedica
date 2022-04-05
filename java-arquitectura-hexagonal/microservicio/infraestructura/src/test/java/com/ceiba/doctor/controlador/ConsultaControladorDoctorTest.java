@@ -1,4 +1,4 @@
-package com.ceiba.cita.controlador;
+package com.ceiba.doctor.controlador;
 
 import static org.hamcrest.Matchers.hasSize;
 import static org.hamcrest.core.Is.is;
@@ -23,20 +23,20 @@ import org.springframework.test.web.servlet.MockMvc;
 @WebMvcTest(ConsultaControladorUsuario.class)
 @ContextConfiguration(classes= ApplicationMock.class)
 @DirtiesContext(classMode = DirtiesContext.ClassMode.AFTER_EACH_TEST_METHOD)
-class ConsultaControladorCitaTest {
+public class ConsultaControladorDoctorTest {
 
-/*    @Autowired
+    @Autowired
     private MockMvc mocMvc;
 
     @Test
-    @DisplayName("Deberia listar cita")
+    @DisplayName("Deberia listar doctores")
     void deberiaListarCita() throws Exception {
         // arrange
         // act - assert
-        mocMvc.perform(get("/cita")
+        mocMvc.perform(get("/doctores")
                         .contentType(MediaType.APPLICATION_JSON))
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$", hasSize(1)))
-                .andExpect(jsonPath("$[0].idCita", is(1)));
-    }*/
+                .andExpect(jsonPath("$[0].idDoctor", is(1)));
+    }
 }

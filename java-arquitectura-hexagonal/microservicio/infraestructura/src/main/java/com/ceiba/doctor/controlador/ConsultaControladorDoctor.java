@@ -11,8 +11,8 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.List;
 
 @RestController
-@RequestMapping("/doctor")
-@Api(tags={"Controlador consulta doctor"})
+@RequestMapping("/doctores")
+@Api(tags={"Controlador consulta doctores"})
 public class ConsultaControladorDoctor  {
 
     private final ManejadorListarDoctor manejadorListarDoctor;
@@ -22,7 +22,7 @@ public class ConsultaControladorDoctor  {
     }
 
     @GetMapping
-    @ApiOperation("Listar Doctor")
+    @ApiOperation("Listar Doctores")
     public List<DtoDoctor> listar() {
         return this.manejadorListarDoctor.ejecutar();
     }

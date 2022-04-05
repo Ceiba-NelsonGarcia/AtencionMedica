@@ -1,12 +1,12 @@
-package com.ceiba.cita.controlador;
+package com.ceiba.doctor.controlador;
 
 import static org.hamcrest.Matchers.hasSize;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
 
 import com.ceiba.ApplicationMock;
-import com.ceiba.cita.comando.ComandoCita;
-import com.ceiba.cita.servicio.testbuilder.ComandoCitaTestDataBuilder;
+import com.ceiba.doctor.comando.ComandoDoctor;
+import com.ceiba.doctor.servicio.testbuilder.ComandoDoctorTestDataBuilder;
 import com.ceiba.usuario.controlador.ComandoControladorUsuario;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.junit.jupiter.api.DisplayName;
@@ -24,7 +24,7 @@ import org.springframework.test.web.servlet.MockMvc;
 @WebMvcTest(ComandoControladorUsuario.class)
 @ContextConfiguration(classes= ApplicationMock.class)
 @DirtiesContext(classMode = DirtiesContext.ClassMode.AFTER_EACH_TEST_METHOD)
-public class ComandoControladorCitaTest {
+class ComandoControladorDoctorTest {
 
     @Autowired
     private ObjectMapper objectMapper;
@@ -33,43 +33,43 @@ public class ComandoControladorCitaTest {
     private MockMvc mocMvc;
 
 /*    @Test
-    @DisplayName("Deberia crear un cita")
-    void deberiaCrearUnCita() throws Exception{
+    @DisplayName("Deberia crear un doctor")
+    void deberiaCrearUnDoctor() throws Exception{
         // arrange
-        ComandoCita cita = new ComandoCitaTestDataBuilder().build();
+        ComandoDoctor doctor = new ComandoDoctorTestDataBuilder().build();
         // act - assert
-        mocMvc.perform(post("/citas/crear")
+        mocMvc.perform(post("/doctores/crear")
                         .contentType(MediaType.APPLICATION_JSON)
-                        .content(objectMapper.writeValueAsString(cita)))
+                        .content(objectMapper.writeValueAsString(doctor)))
                 .andExpect(status().isOk())
                 .andExpect(content().json("{'valor': 2}"));
     }*/
 
     @Test
-    @DisplayName("Deberia actualizar un cita")
-    void deberiaActualizarUnCita() throws Exception{
+    @DisplayName("Deberia actualizar un doctor")
+    void deberiaActualizarUnDoctor() throws Exception{
         // arrange
         Long id = 1L;
-        ComandoCita cita = new ComandoCitaTestDataBuilder().build();
+        ComandoDoctor doctor = new ComandoDoctorTestDataBuilder().build();
         // act - assert
-        mocMvc.perform(put("/citas/{id}",id)
+        mocMvc.perform(put("/doctores/{id}",id)
                         .contentType(MediaType.APPLICATION_JSON)
-                        .content(objectMapper.writeValueAsString(cita)))
+                        .content(objectMapper.writeValueAsString(doctor)))
                 .andExpect(status().isOk());
     }
 
     @Test
-    @DisplayName("Deberia eliminar un cita")
-    void deberiaEliminarUnCita() throws Exception {
+    @DisplayName("Deberia eliminar un doctor")
+    void deberiaEliminarUnDoctor() throws Exception {
         // arrange
         Long id = 1L;
         // act - assert
-        mocMvc.perform(delete("/citas/{id}",id)
+        mocMvc.perform(delete("/doctores/{id}",id)
                         .contentType(MediaType.APPLICATION_JSON)
                         .accept(MediaType.APPLICATION_JSON))
                 .andExpect(status().isOk());
 
-        mocMvc.perform(get("/citas")
+        mocMvc.perform(get("/doctores")
                         .contentType(MediaType.APPLICATION_JSON))
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$", hasSize(0)));

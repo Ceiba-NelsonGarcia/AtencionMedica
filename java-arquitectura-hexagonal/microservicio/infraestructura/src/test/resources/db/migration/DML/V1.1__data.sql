@@ -1,1 +1,0 @@
-insert into usuario(id_usuario, nombre_usuario) values(1,'test');
