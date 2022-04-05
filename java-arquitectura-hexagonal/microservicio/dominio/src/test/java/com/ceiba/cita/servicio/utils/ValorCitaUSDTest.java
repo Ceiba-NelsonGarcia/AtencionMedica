@@ -25,8 +25,6 @@ public class ValorCitaUSDTest {
 
     Cita cita;
     ValorCitaUSD valorCitaUSD;
-    TarifaDiaSemana tarifaDiaSemana;
-    TarifaHorarioDoctor tarifaHorarioDoctor;
     DtoDoctor dtoDoctor = new DtoDoctor(3L, "Alisson Vargas", 1L, 3L);
     DtoTarifa dtoTarifaDoctor = new DtoTarifa(1L,"General", 50L);
     DtoTarifa dtoTarifaDiaHabil = new DtoTarifa(3L,"Dias Habiles", 0L);
