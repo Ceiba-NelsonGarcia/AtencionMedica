@@ -6,7 +6,3 @@ spring:
       password:
       hikari:
          poolName: pool
-      spring:
-         database: h2
-         console: true
-         path: /h2
