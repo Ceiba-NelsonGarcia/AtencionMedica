@@ -25,7 +25,7 @@ import org.springframework.test.web.servlet.MockMvc;
 @DirtiesContext(classMode = DirtiesContext.ClassMode.AFTER_EACH_TEST_METHOD)
 class ConsultaControladorCitaTest {
 
-/*    @Autowired
+    @Autowired
     private MockMvc mocMvc;
 
     @Test
@@ -33,10 +33,10 @@ class ConsultaControladorCitaTest {
     void deberiaListarCita() throws Exception {
         // arrange
         // act - assert
-        mocMvc.perform(get("/cita")
+        mocMvc.perform(get("/citas")
                         .contentType(MediaType.APPLICATION_JSON))
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$", hasSize(1)))
                 .andExpect(jsonPath("$[0].idCita", is(1)));
-    }*/
+    }
 }

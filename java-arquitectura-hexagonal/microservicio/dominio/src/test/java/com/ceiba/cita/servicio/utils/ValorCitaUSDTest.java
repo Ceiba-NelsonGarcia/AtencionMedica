@@ -21,7 +21,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @ExtendWith(MockitoExtension.class)
-public class ValorCitaUSDTest {
+class ValorCitaUSDTest {
 
     Cita cita;
     ValorCitaUSD valorCitaUSD;

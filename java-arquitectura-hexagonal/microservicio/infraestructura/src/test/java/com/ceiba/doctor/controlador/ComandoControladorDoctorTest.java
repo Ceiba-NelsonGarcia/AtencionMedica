@@ -45,7 +45,7 @@ class ComandoControladorDoctorTest {
                 .andExpect(content().json("{'valor': 2}"));
     }*/
 
-    /*@Test
+    @Test
     @DisplayName("Deberia actualizar un doctor")
     void deberiaActualizarUnDoctor() throws Exception{
         // arrange
@@ -73,5 +73,5 @@ class ComandoControladorDoctorTest {
                         .contentType(MediaType.APPLICATION_JSON))
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$", hasSize(0)));
-    }*/
+    }
 }
