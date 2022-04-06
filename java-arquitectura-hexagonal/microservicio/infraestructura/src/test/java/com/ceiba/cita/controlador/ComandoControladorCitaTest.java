@@ -45,7 +45,7 @@ public class ComandoControladorCitaTest {
                 .andExpect(content().json("{'valor': 2}"));
     }*/
 
-    @Test
+    /*@Test
     @DisplayName("Deberia actualizar un cita")
     void deberiaActualizarUnCita() throws Exception{
         // arrange
@@ -73,5 +73,5 @@ public class ComandoControladorCitaTest {
                         .contentType(MediaType.APPLICATION_JSON))
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$", hasSize(0)));
-    }
+    }*/
 }
