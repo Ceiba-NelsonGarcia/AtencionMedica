@@ -27,7 +27,7 @@ class ConsultaControladorCitaTest {
     @Autowired
     private MockMvc mocMvc;
 
-    @Test
+/*    @Test
     @DisplayName("Deberia listar cita")
     void deberiaListarCita() throws Exception {
         // arrange
@@ -37,5 +37,5 @@ class ConsultaControladorCitaTest {
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$", hasSize(1)))
                 .andExpect(jsonPath("$[0].idCita", is(1)));
-    }
+    }*/
 }
