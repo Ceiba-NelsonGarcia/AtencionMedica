@@ -15,19 +15,19 @@ public class RepositorioDoctorMysql implements RepositorioDoctor {
     private final CustomNamedParameterJdbcTemplate customNamedParameterJdbcTemplate;
 
     @SqlStatement(namespace=DOCTOR, value="crear")
-    private String sqlCrear;
+    private static String sqlCrear;
 
     @SqlStatement(namespace=DOCTOR, value="actualizar")
-    private String sqlActualizar;
+    private static String sqlActualizar;
 
     @SqlStatement(namespace=DOCTOR, value="eliminar")
-    private String sqlEliminar;
+    private static String sqlEliminar;
 
     @SqlStatement(namespace=DOCTOR, value="existe")
-    private String sqlExiste;
+    private static String sqlExiste;
 
     @SqlStatement(namespace=DOCTOR, value="existePorId")
-    private String sqlExistePorId;
+    private static String sqlExistePorId;
 
     public RepositorioDoctorMysql(CustomNamedParameterJdbcTemplate customNamedParameterJdbcTemplate) {
         this.customNamedParameterJdbcTemplate = customNamedParameterJdbcTemplate;

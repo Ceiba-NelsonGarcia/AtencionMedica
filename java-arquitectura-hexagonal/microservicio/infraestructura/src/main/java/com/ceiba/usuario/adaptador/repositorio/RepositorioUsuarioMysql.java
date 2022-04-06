@@ -15,19 +15,19 @@ class RepositorioUsuarioMysql implements RepositorioUsuario {
     private final CustomNamedParameterJdbcTemplate customNamedParameterJdbcTemplate;
 
     @SqlStatement(namespace=USUARIO, value="crear")
-    private String sqlCrear;
+    private static String sqlCrear;
 
     @SqlStatement(namespace=USUARIO, value="actualizar")
-    private String sqlActualizar;
+    private static String sqlActualizar;
 
     @SqlStatement(namespace=USUARIO, value="eliminar")
-    private String sqlEliminar;
+    private static String sqlEliminar;
 
     @SqlStatement(namespace=USUARIO, value="existe")
-    private String sqlExiste;
+    private static String sqlExiste;
 
     @SqlStatement(namespace=USUARIO, value="existePorId")
-    private String sqlExistePorId;
+    private static String sqlExistePorId;
 
     public RepositorioUsuarioMysql(CustomNamedParameterJdbcTemplate customNamedParameterJdbcTemplate) {
         this.customNamedParameterJdbcTemplate = customNamedParameterJdbcTemplate;
