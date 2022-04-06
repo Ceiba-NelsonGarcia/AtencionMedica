@@ -7,7 +7,6 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 import com.ceiba.ApplicationMock;
 import com.ceiba.doctor.comando.ComandoDoctor;
 import com.ceiba.doctor.servicio.testbuilder.ComandoDoctorTestDataBuilder;
-import com.ceiba.usuario.controlador.ComandoControladorUsuario;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -21,7 +20,7 @@ import org.springframework.test.context.junit.jupiter.SpringExtension;
 import org.springframework.test.web.servlet.MockMvc;
 
 @ExtendWith(SpringExtension.class)
-@WebMvcTest(ComandoControladorUsuario.class)
+@WebMvcTest(ComandoControladorDoctor.class)
 @ContextConfiguration(classes= ApplicationMock.class)
 @DirtiesContext(classMode = DirtiesContext.ClassMode.AFTER_EACH_TEST_METHOD)
 class ComandoControladorDoctorTest {
@@ -45,7 +44,7 @@ class ComandoControladorDoctorTest {
                 .andExpect(content().json("{'valor': 2}"));
     }*/
 
-/*    @Test
+    @Test
     @DisplayName("Deberia actualizar un doctor")
     void deberiaActualizarUnDoctor() throws Exception{
         // arrange
@@ -73,5 +72,5 @@ class ComandoControladorDoctorTest {
                         .contentType(MediaType.APPLICATION_JSON))
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$", hasSize(0)));
-    }*/
+    }
 }

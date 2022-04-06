@@ -44,7 +44,7 @@ class ComandoControladorUsuarioTest {
                 .andExpect(content().json("{'valor': 2}"));
     }*/
 
-/*    @Test
+    @Test
     @DisplayName("Deberia actualizar un usuario")
     void deberiaActualizarUnUsuario() throws Exception{
         // arrange
@@ -72,5 +72,5 @@ class ComandoControladorUsuarioTest {
                 .contentType(MediaType.APPLICATION_JSON))
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$", hasSize(0)));
-    }*/
+    }
 }

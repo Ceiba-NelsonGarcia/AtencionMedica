@@ -39,16 +39,16 @@ public class RepositorioCitaMysql implements RepositorioCita {
     }
 
     @Override
+    public void actualizarCita(Cita cita) {
+        this.customNamedParameterJdbcTemplate.actualizar(cita, sqlActualizar);
+    }
+
+    @Override
     public void eliminarCita(Long idCita) {
         MapSqlParameterSource paramSource = new MapSqlParameterSource();
         paramSource.addValue(ID_CITA, idCita);
 
         this.customNamedParameterJdbcTemplate.getNamedParameterJdbcTemplate().update(sqlEliminar, paramSource);
-    }
-
-    @Override
-    public void actualizarCita(Cita cita) {
-        this.customNamedParameterJdbcTemplate.actualizar(cita, sqlActualizar);
     }
 
     @Override

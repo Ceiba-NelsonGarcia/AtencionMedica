@@ -7,7 +7,6 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
 import com.ceiba.ApplicationMock;
-import com.ceiba.usuario.controlador.ConsultaControladorUsuario;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -20,7 +19,7 @@ import org.springframework.test.context.junit.jupiter.SpringExtension;
 import org.springframework.test.web.servlet.MockMvc;
 
 @ExtendWith(SpringExtension.class)
-@WebMvcTest(ConsultaControladorUsuario.class)
+@WebMvcTest(ConsultaControladorDoctor.class)
 @ContextConfiguration(classes= ApplicationMock.class)
 @DirtiesContext(classMode = DirtiesContext.ClassMode.AFTER_EACH_TEST_METHOD)
 public class ConsultaControladorDoctorTest {
@@ -28,7 +27,7 @@ public class ConsultaControladorDoctorTest {
     @Autowired
     private MockMvc mocMvc;
 
-/*    @Test
+    @Test
     @DisplayName("Deberia listar doctores")
     void deberiaListarCita() throws Exception {
         // arrange
@@ -38,5 +37,5 @@ public class ConsultaControladorDoctorTest {
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$", hasSize(1)))
                 .andExpect(jsonPath("$[0].idDoctor", is(1)));
-    }*/
+    }
 }
