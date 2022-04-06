@@ -15,19 +15,19 @@ public class RepositorioCitaMysql implements RepositorioCita {
     private final CustomNamedParameterJdbcTemplate customNamedParameterJdbcTemplate;
 
     @SqlStatement(namespace= CITA, value="crear")
-    private String sqlCrear;
+    private static String sqlCrear;
 
     @SqlStatement(namespace= CITA, value="actualizar")
-    private String sqlActualizar;
+    private static String sqlActualizar;
 
     @SqlStatement(namespace= CITA, value="eliminar")
-    private String sqlEliminar;
+    private static String sqlEliminar;
 
     @SqlStatement(namespace= CITA, value="existe")
-    private String sqlExiste;
+    private static String sqlExiste;
 
     @SqlStatement(namespace= CITA, value="existePorId")
-    private String sqlExistePorId;
+    private static String sqlExistePorId;
 
     public RepositorioCitaMysql(CustomNamedParameterJdbcTemplate customNamedParameterJdbcTemplate) {
         this.customNamedParameterJdbcTemplate = customNamedParameterJdbcTemplate;
