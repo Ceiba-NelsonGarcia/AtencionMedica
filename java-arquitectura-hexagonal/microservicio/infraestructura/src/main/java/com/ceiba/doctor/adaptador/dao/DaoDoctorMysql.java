@@ -14,10 +14,10 @@ public class DaoDoctorMysql implements DaoDoctor {
 
     private final CustomNamedParameterJdbcTemplate customNamedParameterJdbcTemplate;
 
-    @SqlStatement(namespace="doctor", value="listar")
+    @SqlStatement(namespace= "doctor", value="listar")
     private static String sqlListar;
 
-    @SqlStatement(namespace="doctor", value="sqlListarId")
+    @SqlStatement(namespace= "doctor", value="sqlListarId")
     private static String sqlListarId;
 
     public DaoDoctorMysql(CustomNamedParameterJdbcTemplate customNamedParameterJdbcTemplate) {
