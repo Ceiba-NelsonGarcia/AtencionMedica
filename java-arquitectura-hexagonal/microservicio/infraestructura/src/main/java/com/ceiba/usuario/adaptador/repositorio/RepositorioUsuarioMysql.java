@@ -35,6 +35,7 @@ class RepositorioUsuarioMysql implements RepositorioUsuario {
 
     @Override
     public Long crear(Usuario usuario) {
+
         return this.customNamedParameterJdbcTemplate.crear(usuario, sqlCrear);
     }
 

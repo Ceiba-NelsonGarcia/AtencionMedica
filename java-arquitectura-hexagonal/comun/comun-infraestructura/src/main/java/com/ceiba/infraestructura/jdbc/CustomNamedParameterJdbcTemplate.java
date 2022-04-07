@@ -24,7 +24,14 @@ public class CustomNamedParameterJdbcTemplate {
 	public Long crear(Object object,String sql) {
 		MapSqlParameterSource paramSource = crearParametros(object);
 		KeyHolder keyHolder = new GeneratedKeyHolder();
-		this.namedParameterJdbcTemplate.update(sql, paramSource,keyHolder,new String[] { "idUsuario" });
+
+		if ("com.ceiba.doctor.modelo.entidad.Doctor".equals(object.getClass().getName())) {
+			this.namedParameterJdbcTemplate.update(sql, paramSource, keyHolder, new String[]{"id_doctor"});
+		}else if(("com.ceiba.usuario.modelo.entidad.Usuario".equals(object.getClass().getName()))){
+			this.namedParameterJdbcTemplate.update(sql, paramSource, keyHolder, new String[]{"id_Usuario"});
+		}else{
+			this.namedParameterJdbcTemplate.update(sql, paramSource, keyHolder, new String[]{"id_Cita"});
+		}
 		return keyHolder.getKey().longValue();
 	}
 	

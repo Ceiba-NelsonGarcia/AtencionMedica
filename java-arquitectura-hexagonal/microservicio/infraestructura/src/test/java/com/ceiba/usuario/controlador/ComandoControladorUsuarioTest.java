@@ -31,7 +31,7 @@ class ComandoControladorUsuarioTest {
     @Autowired
     private MockMvc mocMvc;
 
-/*   @Test
+   @Test
     @DisplayName("Deberia crear un usuario")
     void deberiaCrearUnUsuario() throws Exception{
         // arrange
@@ -42,7 +42,7 @@ class ComandoControladorUsuarioTest {
                 .content(objectMapper.writeValueAsString(usuario)))
                 .andExpect(status().isOk())
                 .andExpect(content().json("{'valor': 2}"));
-    }*/
+    }
 
     @Test
     @DisplayName("Deberia actualizar un usuario")
@@ -51,7 +51,7 @@ class ComandoControladorUsuarioTest {
         Long id = 1L;
         ComandoUsuario usuario = new ComandoUsuarioTestDataBuilder().build();
         // act - assert
-        mocMvc.perform(put("/usuarios/{id}",id)
+        mocMvc.perform(put("/usuarios/{id }",id)
                 .contentType(MediaType.APPLICATION_JSON)
                 .content(objectMapper.writeValueAsString(usuario)))
                 .andExpect(status().isOk());

@@ -31,7 +31,7 @@ class ComandoControladorDoctorTest {
     @Autowired
     private MockMvc mocMvc;
 
-/*    @Test
+    @Test
     @DisplayName("Deberia crear un doctor")
     void deberiaCrearUnDoctor() throws Exception{
         // arrange
@@ -42,7 +42,7 @@ class ComandoControladorDoctorTest {
                         .content(objectMapper.writeValueAsString(doctor)))
                 .andExpect(status().isOk())
                 .andExpect(content().json("{'valor': 2}"));
-    }*/
+    }
 
     @Test
     @DisplayName("Deberia actualizar un doctor")
