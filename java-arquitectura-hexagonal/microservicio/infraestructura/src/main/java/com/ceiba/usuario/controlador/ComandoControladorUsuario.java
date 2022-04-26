@@ -12,6 +12,7 @@ import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 
 @RestController
+@CrossOrigin(origins = "*")
 @RequestMapping("/usuarios")
 @Api(tags = { "Controlador comando usuario"})
 public class ComandoControladorUsuario {
@@ -29,7 +30,7 @@ public class ComandoControladorUsuario {
 		this.manejadorActualizarUsuario = manejadorActualizarUsuario;
     }
 
-    @PostMapping(value="crear")
+	@PostMapping(value="crear")
     @ApiOperation("Crear Usuario")
     public ComandoRespuesta<Long> crear(@RequestBody ComandoUsuario comandoUsuario) {
         return manejadorCrearUsuario.ejecutar(comandoUsuario);
